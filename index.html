@@ -14,7 +14,9 @@ title: Home
 
     <span class="post-date">{{ post.date | date_to_string }}</span>
 
-    {{ post.content }}
+    <!--{{ post.content }}-->
+<!-- Your post's summary goes here -->
+  <article>{{ post.excerpt }}</article> 
   </div>
   {% endfor %}
 </div>

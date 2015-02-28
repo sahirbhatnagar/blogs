@@ -4,13 +4,38 @@ author: "sahir"
 date: '2015-02-26'
 layout: post
 comments: True
+permalink: LaTeX-Jekyll
 ---
+
+\newcommand{\mb}[1]{\mathbf{#1}}
+\newcommand{\dnorm}[3]{\frac{1}{\sqrt{2\pi #3}} \expp{- \frac{\left( #1-#2\right) ^2}{2 #3}}  }
+\newcommand{\dpois}[3]{\frac{\exp\left(-#2\right) #3 }{#1 !}}
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
+<!--Continue-->
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 $$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$
+
+
+Let $$Y_1,\ldots,Y_n$$ be a random sample from the 2 component Poisson mixture for $$y \in \mathbb{R}$$, with rates $$\theta_1,\theta_2$$ and mixing parameter $$0<\omega<1$$. Denote the vector of rate parameters $$\theta = (\theta_1,\theta_2)$$.
+$$ f_{Y|\theta,\omega}(y|\theta,\omega) = \omega  + (1-\omega)$$
+
+Let $$X_1, \ldots,X_n$$ be the unobserved data such that $$P(X_i=1)=\omega$$ and $$P(X_i=2)=1-\omega$$. The complete likelihood function is given by:
+$$
+\begin{align*}
+\mathcal{L}_{\mb{X},\mb{Y}}(\theta,\omega|\mb{x},\mb{y}) &= \prod\limits_{i=1}^{n}\left[  \omega  \dpois{y_i}{\theta_1}{\theta_1^{y_i}}     \right]^{\mathbbm{1}_{\left\lbrace 1\right\rbrace }(x_i)} \left[  (1-\omega)  \dpois{y_i}{\theta_2}{\theta_2^{y_i}}     \right]^{\mathbbm{1}_{\left\lbrace 2\right\rbrace }(x_i)}    
+\end{align*}
+$$
+And the complete log-likelihood (up-to a constant) is given by:
+$$
+\begin{equation}
+\ell_{\mb{X},\mb{Y}}(\theta,\omega|\mb{x},\mb{y}) = \sumn \mathbbm{1}_{\left\lbrace 1\right\rbrace }(x_i)  \left[ \log \omega - \theta_1 + y_i \log \theta_1  \right] +\mathbbm{1}_{\left\lbrace 2\right\rbrace }(x_i)  \left[ \log(1-\omega) - \theta_2 + y_i \log \theta_2  \right]  \label{eq:logfmr2}
+\end{equation}
+$$
+
+
 
 
 ```r
