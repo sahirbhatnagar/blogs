@@ -1,12 +1,68 @@
 <div class="sidebar">
-  <div class="container sidebar-sticky">
+	<div class="container sidebar-sticky">
+<!--<div class="container">-->
     <div class="sidebar-about">
       <h1>
         <a href="{{ site.baseurl }}">
           {{ site.title }}
         </a>
       </h1>
-      <p class="lead">{{ site.description }}</p>
+      <!--<p class="lead">{{ site.description }}</p>-->
+
+    {% if site.author.google_scholar %}
+    <a href="{{ site.author.google_scholar }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="ai ai-google-scholar fa-stack-1x"></i>
+      </span>
+    </a>
+    {% endif %}
+
+    {% if site.author.researchgate %}
+    <a href="{{ site.author.researchgate }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="ai ai-researchgate fa-stack-1x"></i>
+      </span>
+    </a>
+    {% endif %}
+
+    {% if site.author.mendeley %}
+    <a href="{{ site.author.mendeley }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="ai ai-mendeley fa-stack-1x"></i>
+      </span>
+    </a>
+    {% endif %}
+
+    {% if site.author.github %}
+      <a href="https://github.com/{{ site.author.github }}">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-github-alt fa-stack-1x"></i>
+        </span>
+      </a>
+    {% endif %}
+
+    {% if site.author.twitter %}
+      <a href="https://twitter.com/{{ site.author.twitter }}">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x"></i>
+        </span>
+      </a>
+    {% endif %}
+
+{% if site.author.email %}
+      <a href="mailto:{{ site.author.email }}">
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-envelope fa-stack-1x"></i>
+        </span>
+      </a>
+    {% endif %}
+
     </div>
 
     <nav class="sidebar-nav">
@@ -33,7 +89,7 @@
 
     <p>&copy; Sahir Bhatnagar. Powered by <a href="http://jekyllrb.com/">jekyll</a>, <a href="http://getpoole.com/">poole</a>, 
           <a href="http://yihui.name/knitr/">knitr</a>, and
-          <a href="http://johnmacfarlane.net/pandoc/">pandoc</a>.</p>
+          <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> .</p>
   </div>
 </div>
 
