@@ -27,6 +27,24 @@
     </a>
     {% endif %}
 
+    {% if site.author.slideshare %}
+    <a href="{{ site.author.slideshare }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-desktop fa-stack-1x"></i>
+      </span>
+    </a>
+    {% endif %}
+
+    {% if site.author.figshare %}
+    <a href="{{ site.author.figshare }}">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="ai ai-figshare fa-stack-1x"></i>
+      </span>
+    </a>
+    {% endif %}
+
     {% if site.author.mendeley %}
     <a href="{{ site.author.mendeley }}">
       <span class="fa-stack fa-lg">
