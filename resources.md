@@ -1,17 +1,47 @@
 ---
 layout: page
-title: About
+title: Resources
+comments: yes
 ---
 
-<!--# Contents
 {:.no_toc}
 
 * Will be replaced with the ToC, excluding the "Contents" header
-{:toc}-->
+{:toc}
 
-<p class="message">
-I'm a PhD student studying <a href="http://www.mcgill.ca/epi-biostat-occh/" target="_blank">Biostatistics</a> at <a href="http://mcgill.ca" target="_blank">McGill Univeristy</a> under the supervision of <a href="http://www.mcgill.ca/statisticalgenetics/" target="_blank">Celia Greenwood</a> and <a href="http://en.wikipedia.org/wiki/Mathieu_Blanchette_%28computational_biologist%29" target="_blank">Mathieu Blanchette</a>.
-</p>
+***
+
+> Below is my ever increasing collection of useful web resources (in no particular order). I am forever indebted to these fantastic people whom I continue to learn from. Their projects, articles, blog posts, tweets, GitHub repos, `R` packages and software have a tremendous impact on my academic endeavors. 
+
+***
+
+## Websites
+
+* [Data wrangling, exploration, and analysis with R](http://stat545-ubc.github.io/)
+* [Advanced R](http://adv-r.had.co.nz/)
+* [R Packages](http://r-pkgs.had.co.nz/)
+
+
+## Blogs
+
+* [C. Titus Brown](http://ivory.idyll.org/blog/)
+* [Simply Statistics](http://simplystatistics.org/)
+
+
+## GitHub Repositories
+
+* [Jenny Bryan, UBC](https://github.com/jennybc)
+* [Jeff L.](https://github.com/jtleek)
+* [Guide to R Packages](https://github.com/jtleek/rpackages)
+* [Guide to genomics papers](https://github.com/jtleek/genomicspapers)
+* [Hadley Wickham](https://github.com/hadley)
+
+
+## Twitter
+
+
+
+
 
 <!--<p class="message">
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
