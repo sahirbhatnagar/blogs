@@ -15,11 +15,20 @@ comments: yes
 
 ***
 
+## `R` Packages for visualisation
+
+* [Directed acyclic graphs](http://rich-iannone.github.io/DiagrammeR/)
+* [PLS path diagrams](https://github.com/gastonstat/pathdiagram)
+* [`HTML` Widgets for `R`](https://github.com/ramnathv/htmlwidgets)
+
+
+
 ## Websites
 
 * [Data wrangling, exploration, and analysis with R](http://stat545-ubc.github.io/)
 * [Advanced R](http://adv-r.had.co.nz/)
 * [R Packages](http://r-pkgs.had.co.nz/)
+* [PLS Path modeling with Gaston Sanchez](http://gastonsanchez.com/)
 
 
 ## Blogs
@@ -34,7 +43,8 @@ comments: yes
 * [Jeff L.](https://github.com/jtleek)
 * [Guide to R Packages](https://github.com/jtleek/rpackages)
 * [Guide to genomics papers](https://github.com/jtleek/genomicspapers)
-* [Hadley Wickham](https://github.com/hadley)
+* [Hadley](https://github.com/hadley)
+* [Ramnathv](https://github.com/ramnathv)
 
 
 ## Twitter
