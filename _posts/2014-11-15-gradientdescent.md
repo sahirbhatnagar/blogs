@@ -9,13 +9,13 @@ tags:
 - R
 - optimization
 - regression
-comments: yes
+comments: yes 
 ---
-
+ 
 I am taking the Machine Learning course on [Coursera](https://class.coursera.org/ml-007/lecture) being taught by Andrew Ng. It is turning out to be useful so far, and he has presented the material clearly. It's a nice introduction to the Machine Learning/Computer Science language, since I come from a statistics background. 
 
 I learned about gradient descent today for simple linear regression. The following is my code in R and I compare it to the *lm* function in base *R*. 
-
+<!--more-->
 I am using the **Prostate** dataset from the *lasso2* package. The model I am fitting is:
 
 $$ lpsa = \beta_0 + \beta_1 \times lcavol  $$

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Tutorials
 ---
 
 # Contents
@@ -12,9 +12,6 @@ title: About
 # H1 header
 
 ## H2 header
-
-# Who am I
-I'm a PhD student studying <a href="http://www.mcgill.ca/epi-biostat-occh/" target="_blank">Biostatistics</a> at <a href="http://mcgill.ca" target="_blank">McGill Univeristy</a> under the supervision of <a href="http://www.mcgill.ca/statisticalgenetics/" target="_blank">Celia Greenwood</a> and <a href="http://en.wikipedia.org/wiki/Mathieu_Blanchette_%28computational_biologist%29" target="_blank">Mathieu Blanchette</a>.
 
 ## What do I do
 

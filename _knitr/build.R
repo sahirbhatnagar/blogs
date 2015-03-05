@@ -24,7 +24,7 @@ local({
     knitr::opts_chunk$set(fig.path = sprintf('%s/', gsub('^.+/', '', d)))
     knitr::opts_knit$set(
       base.dir = 'figure/posts/',
-      base.url = 'figure/posts/'
+      base.url = '/figure/posts/'
     )
   } else {
     knitr::opts_knit$set(base.url = '/')

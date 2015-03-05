@@ -5,6 +5,7 @@ redcarpet:
 
 #highlighter:      pygments
 
+excerpt_separator: <!--more-->  # you can specify your own separator
 
 # Permalinks
 permalink:        pretty
@@ -38,4 +39,4 @@ version:          2.1.0
 #github:
 #  repo:           https://github.com/sahirbhatnagar/
 
-excerpt_separator: <!--Continue-->
+
