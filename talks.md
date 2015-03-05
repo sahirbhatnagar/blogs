@@ -22,6 +22,9 @@ comments: yes
 
 ### 2014
 
+* **McGill University** _Department of Mathematics and Statistics_  
+[Estimation and Accuracy after Model Selection](http://www.slideshare.net/sahirbhatnagar/estimation-and-accuracy-after-model-selection)
+
 * **McGill University** _McGill Biostatistics Journal Club_  
 [Reproducible Research with knitr](http://www.slideshare.net/sahirbhatnagar/rrslides)
 
