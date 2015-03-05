@@ -3,21 +3,15 @@ layout: page
 title: Tutorials
 ---
 
-# Contents
+<!--## Contents
 {:.no_toc}
 
 * Will be replaced with the ToC, excluding the "Contents" header
-{:toc}
+{:toc}-->
 
-# H1 header
+* [Reproducible Research with `knitr`](/tutorials/knitr.html)
 
-## H2 header
 
-## What do I do
-
-## Where will I go
-
-# How can I leave
 
 <!--<p class="message">
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
