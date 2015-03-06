@@ -11,11 +11,11 @@ comments: yes
 
 ***
 
-> Below is my ever increasing collection of useful web resources (in no particular order). I am forever indebted to these fantastic people whom I continue to learn from. Their projects, articles, blog posts, tweets, GitHub repos, `R` packages and software have a tremendous impact on my academic endeavors. 
+> Below is my ever increasing collection of useful web resources (in no particular order). I am grateful for their efforts. Their projects, articles, blog posts, tweets, GitHub repos, `R` packages and software have a tremendous impact on my academic endeavors. 
 
 ***
 
-## `R` Packages for visualisation
+## R Packages for visualisation
 
 * [Directed acyclic graphs](http://rich-iannone.github.io/DiagrammeR/)
 * [PLS path diagrams](https://github.com/gastonstat/pathdiagram)
@@ -50,6 +50,11 @@ comments: yes
 ## Twitter
 
 
+## Building Websites with Jekyll
+
+* [Minimal Blog Using Jekyll, Github Pages, and poole](http://joshualande.com/jekyll-github-pages-poole/)
+* [Jekyll By Example](https://www.andrewmunsell.com/tutorials/jekyll-by-example)
+* [Serve Jekyll Websites with servr and knitr](http://yihui.name/knitr-jekyll/2014/09/jekyll-with-knitr.html)
 
 
 
