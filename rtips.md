@@ -12,3 +12,9 @@ comments: yes
 {% highlight r %}
 demo(plotmath)
 {% endhighlight %}
+
+* Converting a matrix of characters into numeric
+{% highlight r %}
+mat <- matrix(c("5","6","7","8","hello","world"),ncol=3)
+class(mat) <- "numeric"
+{% endhighlight %}
