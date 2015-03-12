@@ -16,6 +16,9 @@ comments: yes
 
 ### 2015
 
+* **Lady David Institute** _Statistical Genetics Journal Club_  
+[Imputing Epigenomic Datasets](/slides/imputeepigenome.html)
+
 * **Lady Davis Institute** _Greenwood lab meeting_  
 [Making sense of Methylation and Expression data](http://www.slideshare.net/sahirbhatnagar/methylation-and-expression-data-integration)
 
