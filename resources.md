@@ -21,7 +21,9 @@ comments: yes
 * [PLS path diagrams](https://github.com/gastonstat/pathdiagram)
 * [`HTML` Widgets for `R`](https://github.com/ramnathv/htmlwidgets)
 
+## LaTeX 
 
+* [Creating Flowcharts with TikZ](https://www.sharelatex.com/blog/2013/08/29/tikz-series-pt3.html)
 
 ## Websites
 
