@@ -40,7 +40,54 @@ args[1]+args[2]
 ```
 {% endhighlight %}
 
-**script.sh**
-{% highlight Bash shell scripts %}
+**command line**
+{% highlight bash %}
 Rscript -e 'rmarkdown::render("source.Rmd")' 0.5 0.7
+{% endhighlight %}
+
+***
+
+* Rendering `HTML` documents with [`knitrBootstrap`](https://github.com/jimhester/knitrBootstrap) on the command line. Thanks to [lcolladotor](http://lcolladotor.github.io/derfinder/derfinder.html#Reproducibility)
+
+**source.Rmd**
+{% highlight r %}
+---
+output:
+  html_document:
+    toc: true
+    theme: united
+  knitrBootstrap::bootstrap_document:
+    theme.chooser: TRUE
+    highlight.chooser: TRUE
+---
+
+<!--
+%\VignetteEngine{knitr::rmarkdown}
+%\VignetteIndexEntry{Some title here}
+-->
+
+Testing `knitrBootstrap`
+==================================
+
+```{r}
+args <- commandArgs(trailingOnly = TRUE)
+args[1]+args[2]
+```
+{% endhighlight %}
+
+**command line**
+{% highlight bash %}
+Rscript -e 'library(knitrBootstrap);library(rmarkdown);render("source.Rmd", "knitrBootstrap::bootstrap_document")' .05 .07
+{% endhighlight %}
+
+*be careful of the single quotes and double quotes: it matters!*
+
+***
+
+* Testing for the presence of elements in one vector in another, i.e., the opposite of `%in%`
+
+{% highlight r %}
+"%ni%" <- Negate("%in%")
+c(2,3) %ni% c(2,4,5)
+[1] FALSE  TRUE
 {% endhighlight %}
