@@ -8,14 +8,14 @@ comments: yes
 
 ***
 
-For math styles in `R` plots. Thanks to [@RLangTip](https://twitter.com/RLangTip)
+* For math styles in `R` plots. Thanks to [@RLangTip](https://twitter.com/RLangTip)
 {% highlight r %}
 demo(plotmath)
 {% endhighlight %}
 
 ***
 
-Converting a matrix of characters into numeric
+* Converting a matrix of characters into numeric
 {% highlight r %}
 mat <- matrix(c("5","6","7","8","hello","world"),ncol=3)
 class(mat) <- "numeric"
@@ -23,7 +23,15 @@ class(mat) <- "numeric"
 
 ***
 
-Passing command line arguments using `rmarkdown::render()`. Thanks to [sjackman](https://github.com/rstudio/rmarkdown/issues/319)  
+* Running the equivalent of `knitHTML` in `RStudio` on the command line. Note you must install [pandoc first](https://github.com/rstudio/rmarkdown/blob/master/PANDOC.md#newer-systems-debianubuntufedora)
+{% highlight r %}
+rmarkdown::render("source.Rmd")
+{% endhighlight %}
+
+***
+
+* Passing command line arguments using `rmarkdown::render()`. Thanks to [sjackman](https://github.com/rstudio/rmarkdown/issues/319)  
+
 **source.Rmd**
 {% highlight r %}
 ```{r}
