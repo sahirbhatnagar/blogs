@@ -91,3 +91,9 @@ Rscript -e 'library(knitrBootstrap);library(rmarkdown);render("source.Rmd", "kni
 c(2,3) %ni% c(2,4,5)
 [1] FALSE  TRUE
 {% endhighlight %}
+
+***
+
+* How the `bs` function works for B-splines in `R` by [Samiran Sinha](http://www.stat.tamu.edu/~sinha/research/note1.pdf)
+
+
