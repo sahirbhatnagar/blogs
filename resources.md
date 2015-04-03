@@ -15,6 +15,12 @@ comments: yes
 
 ***
 
+## Statistics
+
+* [How to bootstrap correlated data](http://biostat.mc.vanderbilt.edu/wiki/Main/HowToBootstrapCorrelatedData)
+
+
+
 ## Mentors
 
 * [Celia Greenwood](http://www.mcgill.ca/statisticalgenetics/home-page)
