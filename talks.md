@@ -54,6 +54,14 @@ comments: yes
 
 ***
 
+### 2015
+
+* **Vancouver, Canada** _4th Annual Canadian Human and Statistical Genetics Meeting_  
+[Integrating DNA Methylation and Gene Expression data in Placenta Tissue to Predict Childhood Obesity](http://figshare.com/articles/Integrating_DNA_Methylation_and_Gene_Expression_data_in_Placenta_Tissue_to_Predict_Childhood_Obesity/1380130)
+
+<iframe src="http://wl.figshare.com/articles/1380130/embed?show_title=0" width="568" height="504" frameborder="0"></iframe>
+
+
 ### 2014
 
 * **Vienna, Austria** _Genetic Analysis Workshop 19_  
