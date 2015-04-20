@@ -16,6 +16,9 @@ comments: yes
 
 ### 2015
 
+* **CHSGM 2015, Vancouver** _Canadian Human and Statistical Genetics Meeting (Invited)_  
+[DNA methylation and Expression to predict childhood obesity](http://www.slideshare.net/sahirbhatnagar/sahir-chsgm2015)
+
 * **Lady David Institute** _Statistical Genetics Journal Club_  
 [Imputing Epigenomic Datasets](/slides/imputeepigenome.html)
 
