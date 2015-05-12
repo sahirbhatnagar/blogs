@@ -46,6 +46,7 @@ comments: yes
 
 ## Websites
 
+* [Hands-On Data Science with R](http://onepager.togaware.com/)
 * [Tools for Reproducible Research](http://kbroman.org/Tools4RR/pages/schedule.html)
 * [Data wrangling, exploration, and analysis with R](http://stat545-ubc.github.io/)
 * [Advanced R](http://adv-r.had.co.nz/)
