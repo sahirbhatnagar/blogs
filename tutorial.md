@@ -9,7 +9,7 @@ title: Tutorials
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}-->
 
-* [Reproducible Research with `knitr` (incomplete)](/tutorials/knitr.html)
+* [Reproducible Research: An introduction to `knitr`](https://github.com/sahirbhatnagar/knitr-tutorial)
 
 
 
