@@ -12,7 +12,7 @@ title: About
 <p class="message">
 I'm a PhD student studying <a href="http://www.mcgill.ca/epi-biostat-occh/" target="_blank">Biostatistics</a> at <a href="http://mcgill.ca" target="_blank">McGill Univeristy</a> under the supervision of <a href="http://www.mcgill.ca/statisticalgenetics/" target="_blank">Celia Greenwood</a> and <a href="http://en.wikipedia.org/wiki/Mathieu_Blanchette_%28computational_biologist%29" target="_blank">Mathieu Blanchette</a>.  
 
-I completed a BSc in Actuarial Science at Concordia University and worked in pension plan valuations for 4 years at a consulting firm in Montreal. During this time I became an Associate of the Society of Actuaries. I then went on to complete an MSc in Biostatistics from Queen's University. I am broadly interested in developing statistical methods for synthesizing genomic data. My current work focuses on understanding genetic signatures that are associated with bodyfat measures in children born to women who had a gestational diabetes mellitus-affected pregnancy.
+I completed a BSc in Actuarial Science at Concordia University and worked in pension plan administration and valuations for 4 years at a consulting firm in Montreal. During this time I became an Associate of the Society of Actuaries. I then went on to complete an MSc in Biostatistics from Queen's University. I am broadly interested in developing statistical methods for synthesizing genomic data. My current work focuses on understanding genetic signatures that are associated with bodyfat measures in children born to women who had a gestational diabetes mellitus-affected pregnancy.
 </p>
 
 <!--<p class="message">

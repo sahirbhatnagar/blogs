@@ -41,7 +41,7 @@ html {
 }
 @media (min-width: 58em) {
   html {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 
@@ -65,8 +65,9 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 18rem;
+    width: 11rem;
     text-align: left;
+    font-size: 14px;
   }
 }
 

@@ -16,6 +16,9 @@ comments: yes
 
 ### 2015
 
+* **McGill University** _Department of Epidemiology, Biostatistics and Occupational Health (Sponsored by the CRM Statistics Laboratory and the Montreal Biostatistics Seminar Series)_  
+[Reproducible Research: An introduction to `knitr`](http://www.slideshare.net/sahirbhatnagar/mcgill-knitr)
+
 * **CHSGM 2015, Vancouver** _Canadian Human and Statistical Genetics Meeting (Invited)_  
 [DNA methylation and Expression to predict childhood obesity](http://www.slideshare.net/sahirbhatnagar/sahir-chsgm2015)
 

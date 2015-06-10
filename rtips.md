@@ -96,4 +96,33 @@ c(2,3) %ni% c(2,4,5)
 
 * How the `bs` function works for B-splines in `R` by [Samiran Sinha](http://www.stat.tamu.edu/~sinha/research/note1.pdf)
 
+***
+
+* Find records which occur in table 1 but not in table 2 using `anti_join` in `dplyr`. Thanks to [ZevRoss](http://zevross.com/blog/2014/08/05/using-the-r-function-anti_join-to-find-unmatched-records/)
+
+{% highlight r %}
+> library(dplyr)
+
+> d <- Titanic %>% as.data.frame
+
+> (d1 <- d[1:5,])
+  Class    Sex   Age Survived Freq
+1   1st   Male Child       No    0
+2   2nd   Male Child       No    0
+3   3rd   Male Child       No   35
+4  Crew   Male Child       No    0
+5   1st Female Child       No    0
+
+> (d2 <- d[2:6,])
+  Class    Sex   Age Survived Freq
+2   2nd   Male Child       No    0
+3   3rd   Male Child       No   35
+4  Crew   Male Child       No    0
+5   1st Female Child       No    0
+6   2nd Female Child       No    0
+
+> anti_join(d1,d2, by=c("Class","Sex","Age"))
+  Class  Sex   Age Survived Freq
+1   1st Male Child       No    0
+{% endhighlight %}
 
