@@ -147,6 +147,27 @@ pheatmap::pheatmap(t(genes),
 
 ----
 
+## *Update: June 25, 2015*
+### Interactive Heatmaps using [`d3heatmap`](https://github.com/rstudio/d3heatmap)
+
+It is also possible to create Interactive heatmaps (in the sense that you can see the actual values by hovering your mouse over the plot) using the [`d3heatmap`](https://github.com/rstudio/d3heatmap) pacakge available on github:
+
+```{r, eval=FALSE}
+if (!require("devtools")) install.packages("devtools")
+devtools::install_github("rstudio/d3heatmap")
+```
+
+This is useful if you are producible markdown reports. The syntax is standard, though does not allow for multiple annotations as in `pheatmap`.
+
+```{r}
+library(d3heatmap)
+d3heatmap(t(genes), colors = "Reds", Colv = FALSE)
+```
+
+
+
+----
+
 ### Simulate Gene Expression Data function<a name="function"></a>
 
 ```{r, echo=TRUE, eval=FALSE, tidy=FALSE}
@@ -172,4 +193,7 @@ sim.expr.data <- function(n, n0, p, rho.0, rho.1){
   return(genes)
 }
 ```
+
+
+
 
