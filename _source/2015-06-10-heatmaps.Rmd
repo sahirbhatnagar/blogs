@@ -148,6 +148,7 @@ pheatmap::pheatmap(t(genes),
 ----
 
 ## *Update: June 25, 2015*
+
 ### Interactive Heatmaps using [`d3heatmap`](https://github.com/rstudio/d3heatmap)
 
 It is also possible to create Interactive heatmaps (in the sense that you can see the actual values by hovering your mouse over the plot) using the [`d3heatmap`](https://github.com/rstudio/d3heatmap) pacakge available on github:
@@ -164,6 +165,7 @@ library(d3heatmap)
 d3heatmap(t(genes), colors = "Reds", Colv = FALSE)
 ```
 
+For some reason, this map is not showing up on this website, but it should work when compiling Rmarkdown scripts and viewing the resulting HTML document in your browser or within RStudio.
 
 
 ----
