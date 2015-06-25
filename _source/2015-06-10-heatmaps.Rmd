@@ -147,7 +147,7 @@ pheatmap::pheatmap(t(genes),
 
 ----
 
-## *Update: June 25, 2015*
+## *Update: June 25, 2015*  
 
 ### Interactive Heatmaps using [`d3heatmap`](https://github.com/rstudio/d3heatmap)
 
