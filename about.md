@@ -10,9 +10,15 @@ title: About
 {:toc}-->
 
 <p class="message">
-I'm a PhD student studying <a href="http://www.mcgill.ca/epi-biostat-occh/" target="_blank">Biostatistics</a> at <a href="http://mcgill.ca" target="_blank">McGill Univeristy</a> under the supervision of <a href="http://www.mcgill.ca/statisticalgenetics/" target="_blank">Celia Greenwood</a> and <a href="http://en.wikipedia.org/wiki/Mathieu_Blanchette_%28computational_biologist%29" target="_blank">Mathieu Blanchette</a>.  
+I'm a PhD student studying <a href="http://www.mcgill.ca/epi-biostat-occh/" target="_blank">Biostatistics</a> at <a href="http://mcgill.ca" target="_blank">McGill Univeristy</a> under the supervision of <a href="http://www.mcgill.ca/statisticalgenetics/" target="_blank">Dr. Celia Greenwood</a> and <a href="http://en.wikipedia.org/wiki/Mathieu_Blanchette_%28computational_biologist%29" target="_blank">Dr. Mathieu Blanchette</a>.  
 
 I completed a BSc in Actuarial Science at Concordia University and worked in pension plan administration and valuations for 4 years at a consulting firm in Montreal. During this time I became an Associate of the Society of Actuaries. I then went on to complete an MSc in Biostatistics from Queen's University. I am broadly interested in developing statistical methods for synthesizing genomic data. My current work focuses on understanding genetic signatures that are associated with bodyfat measures in children born to women who had a gestational diabetes mellitus-affected pregnancy.
+</p>
+
+
+
+<p class="message">
+Je fait actuellement mes &eacute;tudes de doctorat dans le d&eacute;partement <a href="http://www.mcgill.ca/epi-biostat-occh/" target="_blank">d'&eacute;pid&eacute;miologie et de biostatistique</a>  &agrave; <a href="http://mcgill.ca" target="_blank">l'Universit&eacute; de McGill</a> et travaille sous la supervision de <a href="http://www.mcgill.ca/statisticalgenetics/" target="_blank">Dr. Celia Greenwood</a> et <a href="http://en.wikipedia.org/wiki/Mathieu_Blanchette_%28computational_biologist%29" target="_blank">Dr. Mathieu Blanchette</a>. J'ai compl&eacute;t&eacute; un baccalaur&eacute;at en actuariat &agrave; l'Universit&eacute; de Concordia pour ensuite d&eacute;buter ma carri&egrave;re dans le domaine des r&eacute;gimes de retraite au sein d'une importante firme d'actuariat-conseil. Au cours de mes 4 ann&eacute;es d'exp&eacute;riences dans le domaine de l'actuariat, j'ai obtenu mon titre d'associ&eacute; de la Soci&eacute;t&eacute; des Actuaires. Par la suite, j'ai compl&eacute;t&eacute; une ma&icirc;trise en biostatistique &agrave; l'Universit&eacute; Queen's.
 </p>
 
 <!--<p class="message">
