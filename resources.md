@@ -52,6 +52,7 @@ comments: yes
 * [Advanced R](http://adv-r.had.co.nz/)
 * [R Packages](http://r-pkgs.had.co.nz/)
 * [PLS Path modeling with Gaston Sanchez](http://gastonsanchez.com/)
+* [Cropping figures online](http://www.picresize.com/)
 
 
 ## Blogs
