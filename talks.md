@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Presentations"
-comments: yes
+comments: no
 ---
 
 ## Contents

@@ -1,25 +1,27 @@
 ---
 layout: page
 title: Resources
-comments: yes
+comments: no
 ---
+
+> Below is my ever increasing collection of useful web resources (in no particular order) as well as my academic mentors. I am grateful for their efforts. Their teachings, discussions, projects, articles, blog posts, tweets, GitHub repos, `R` packages and software have a tremendous impact on my academic endeavors. 
+
+***
 
 {:.no_toc}
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-***
-
-> Below is my ever increasing collection of useful web resources (in no particular order) as well as my academic mentors. I am grateful for their efforts. Their teachings, discussions, projects, articles, blog posts, tweets, GitHub repos, `R` packages and software have a tremendous impact on my academic endeavors. 
 
 ***
 
 ## Statistics
 
 * [How to bootstrap correlated data](http://biostat.mc.vanderbilt.edu/wiki/Main/HowToBootstrapCorrelatedData)
+* Principal Component Analysis: [Link 1](http://people.maths.ox.ac.uk/richardsonm/SignalProcPCA.pdf), [Link 2](http://setosa.io/ev/principal-component-analysis/), [Link 3](http://gastonsanchez.com/teaching/pcarevealed/)
 
-
+***
 
 ## Mentors
 
@@ -33,6 +35,7 @@ comments: yes
 * [Andrea Benedetti](https://www.researchgate.net/profile/Andrea_Benedetti)
 * [David Stephens](http://www.math.mcgill.ca/~dstephens/)
 
+***
 
 ## R Packages for visualisation
 
@@ -40,9 +43,13 @@ comments: yes
 * [PLS path diagrams](https://github.com/gastonstat/pathdiagram)
 * [`HTML` Widgets for `R`](https://github.com/ramnathv/htmlwidgets)
 
+***
+
 ## LaTeX 
 
 * [Creating Flowcharts with TikZ](https://www.sharelatex.com/blog/2013/08/29/tikz-series-pt3.html)
+
+***
 
 ## Websites
 
@@ -54,12 +61,15 @@ comments: yes
 * [PLS Path modeling with Gaston Sanchez](http://gastonsanchez.com/)
 * [Cropping figures online](http://www.picresize.com/)
 
+***
+
 
 ## Blogs
 
 * [C. Titus Brown](http://ivory.idyll.org/blog/)
 * [Simply Statistics](http://simplystatistics.org/)
 
+***
 
 ## GitHub Repositories
 
@@ -70,9 +80,11 @@ comments: yes
 * [Hadley](https://github.com/hadley)
 * [Ramnathv](https://github.com/ramnathv)
 
+***
 
 ## Twitter
 
+***
 
 ## Building Websites with Jekyll
 
