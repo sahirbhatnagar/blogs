@@ -60,6 +60,7 @@ comments: no
 * [R Packages](http://r-pkgs.had.co.nz/)
 * [PLS Path modeling with Gaston Sanchez](http://gastonsanchez.com/)
 * [Cropping figures online](http://www.picresize.com/)
+* [French accents in `Markdown`](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (precede with an ampersand and follow with a semicolon e.g. & eacute ; gives &eacute;)
 
 ***
 
