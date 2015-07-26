@@ -48,6 +48,7 @@ comments: no
 ## LaTeX 
 
 * [Creating Flowcharts with TikZ](https://www.sharelatex.com/blog/2013/08/29/tikz-series-pt3.html)
+* [LaTeX Color](http://latexcolor.com/)
 
 ***
 
