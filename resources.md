@@ -49,6 +49,7 @@ comments: no
 
 * [Creating Flowcharts with TikZ](https://www.sharelatex.com/blog/2013/08/29/tikz-series-pt3.html)
 * [LaTeX Color](http://latexcolor.com/)
+* [RGB color picker](http://www.rapidtables.com/web/color/RGB_Color.htm)
 
 ***
 
