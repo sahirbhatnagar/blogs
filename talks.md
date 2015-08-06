@@ -10,14 +10,27 @@ comments: no
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Talks
+## Workshops
 
 ***
 
 ### 2015
 
-* **McGill University** _Department of Epidemiology, Biostatistics and Occupational Health (Sponsored by the CRM Statistics Laboratory and the Montreal Biostatistics Seminar Series)_  
-[Reproducible Research: An introduction to `knitr`](http://www.slideshare.net/sahirbhatnagar/mcgill-knitr)
+* **Universit&eacute; de Montr&eacute;al**  _GERAD: Groupe d'&eacute;tudes et de recherche en analyse des d&eacute;cisions_  
+[Atelier sur le logiciel R](http://www.slideshare.net/sahirbhatnagar/atelier-rgerad)  
+[mat&eacute;riaux disponibles sur GitHub](https://github.com/sahirbhatnagar/atelier-R-GERAD)
+
+* **McGill University**  _Department of Epidemiology, Biostatistics and Occupational Health (Sponsored by the CRM Statistics Laboratory and the Montreal Biostatistics Seminar Series)_  
+[Reproducible Research: An introduction to `knitr`](http://www.slideshare.net/sahirbhatnagar/mcgill-knitr)  
+[contents available on GitHub](https://github.com/sahirbhatnagar/knitr-tutorial)
+
+
+
+## Talks
+
+***
+
+### 2015
 
 * **CHSGM 2015, Vancouver** _Canadian Human and Statistical Genetics Meeting (Invited)_  
 [DNA methylation and Expression to predict childhood obesity](http://www.slideshare.net/sahirbhatnagar/sahir-chsgm2015)
@@ -55,7 +68,9 @@ comments: no
 
 * **Queen's University** _Department of Mathematics and Statistics_  
 [Computational methods for absolute risk estimation in Case-Cohort studies](http://www.slideshare.net/sahirbhatnagar/computational-45455967)
-  
+
+
+
 ## Posters
 
 ***
