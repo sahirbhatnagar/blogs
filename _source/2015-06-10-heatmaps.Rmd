@@ -18,6 +18,8 @@ opts_template$set(
     fig.full = list(fig.width = 9, fig.height = 7, fig.align = 'center', fig.pos = 'h')
 )
 knit_hooks$set(crop = hook_pdfcrop)
+library(plotly)
+py <- plotly("sahirbhatnagar", "qpxgmagarx")
 ```
 
 In every statistical analysis, the first thing one should do is try and visualise the data before any modeling. In microarray studies, a common visualisation is a heatmap of gene expression data. In this post I simulate some gene expression data and visualise it using the `pheatmap` function from the [pheatmap](http://cran.r-project.org/web/packages/pheatmap/) package in `R`. You will also need the `mvrnorm` function from the [MASS](http://cran.r-project.org/web/packages/MASS/index.html) library to simulate from a multivariate normal distribution, and the `brewer.pal` function from the [RColorBrewer](http://cran.r-project.org/web/packages/RColorBrewer/index.html) library for easier customization of colors. 
@@ -167,6 +169,16 @@ d3heatmap(t(genes), colors = "Reds", Colv = FALSE)
 
 For some reason, this map is not showing up on this website, but it should work when compiling Rmarkdown scripts and viewing the resulting HTML document in your browser or within RStudio.
 
+## *Update: August 7, 2015*  
+
+### Interactive Heatmaps using [`plotly`](https://plot.ly/r/heatmaps/)
+
+After some user setup (see the plotly [help page](https://plot.ly/r/getting-started/)), the following code creates an interactive heatmap:
+
+```{r}
+expression <- t(genes)
+plot_ly(z = expression,colorscale = col.pal, type = "heatmap")
+```
 
 ----
 
