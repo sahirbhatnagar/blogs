@@ -32,6 +32,10 @@ comments: no
 
 ### 2015
 
+* **Notman House** _Montr&eacute;al useR group_  
+[Introduction to knitr and RMarkdown](http://www.slideshare.net/sahirbhatnagar/an-introduction-to-knitr-and-r-markdown)
+
+
 * **CHSGM 2015, Vancouver** _Canadian Human and Statistical Genetics Meeting (Invited)_  
 [DNA methylation and Expression to predict childhood obesity](http://www.slideshare.net/sahirbhatnagar/sahir-chsgm2015)
 
