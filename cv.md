@@ -3,4 +3,4 @@ layout: page
 title: CV
 ---
 
-* [CV (updated June 11, 2015)](/slides/SahirCV.pdf)
+* [CV (updated August 19, 2015)](/slides/SahirCV.pdf)
