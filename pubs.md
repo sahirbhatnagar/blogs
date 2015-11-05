@@ -6,7 +6,7 @@ title: "Publications"
 
 ### 2015
 
-4. Wang Y, Murphy O, Turgeon M, Wang ZY, **Bhatnagar S**, Schulz J, and Moodie EEM. _The perils of Quasi-likelihood Information Criteria_ Stat. (Accepted 2015/09)
+4. Wang Y, Murphy O, Turgeon M, Wang ZY, **Bhatnagar S**, Schulz J, and Moodie EEM. _The perils of Quasi-likelihood Information Criteria_. Stat. (Accepted 2015/09)
 
 
 3. **Bhatnagar S**, Greenwood CMT, Labbe A. _Assessing transmission ratio distortion in extended families: a comparison of analysis methods_. BMC Bioinformatics. (Accepted 2015/01)
