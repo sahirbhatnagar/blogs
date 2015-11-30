@@ -17,3 +17,8 @@ title: "Publications"
 ### 2014
 
 1. **Bhatnagar S**, Atherton J, Benedetti A. _Comparing alternating logistic regressions to other approaches to modelling correlated binary data_. Journal of Statistical Computation and Simulation. [doi:10.1080/00949655.2014.916707](http://www.tandfonline.com/doi/full/10.1080/00949655.2014.916707#.U7_isnWx22i)
+
+
+### 2013
+
+1. **Bhatnagar S**. _Absolute risk estimation in a case cohort study of prostate cancer_. [Master's Thesis Project](http://qspace.library.queensu.ca/handle/1974/8279). Queen's University.
