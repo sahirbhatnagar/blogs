@@ -134,6 +134,18 @@ anti_join(d1,d2, by=c("Class","Sex","Age"))
 servr::jekyll(script = "_knitr/build.R", serve = FALSE)
 {% endhighlight %}
 
+If you get the following error:
+
+{% highlight r %}
+Error in jekyll_build() : Failed to run: jekyll build
+{% endhighlight %}
+
+
+Try passing the full path of the executable `jekyll` to the `servr::jekyll()` function (which can be found via `which jekyll` in the terminal) [as noted here](http://stackoverflow.com/questions/31091443/r-servrjekyll-build-error). For example, on my laptop I ran the following command from the root directory of my website:
+
+{% highlight r %}
+servr::jekyll(script = "_knitr/build.R", serve = FALSE, command = '/home/sahir/.rbenv/shims/jekyll build')
+{% endhighlight %}
 
 
 
