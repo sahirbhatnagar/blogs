@@ -13,7 +13,7 @@ comments: yes
 
 In this post I show how we can use $$\LaTeX$$ math expressions to label the panels in facets to produce the following plot:
 
-![plot of chunk unnamed-chunk-1](/figure/posts/2016-02-08-facet_wrap_labels/unnamed-chunk-1-1.png) 
+<img src="/figure/posts/2016-02-08-facet_wrap_labels/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 
 

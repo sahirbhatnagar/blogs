@@ -24,7 +24,7 @@ py <- plotly("sahirbhatnagar", "qpxgmagarx")
 
 In this post I show how we can use $$\LaTeX$$ math expressions to label the panels in facets to produce the following plot:
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, opts.label = 'fig.full'}
 library(latex2exp)
 data <- devtools::source_gist("https://gist.github.com/sahirbhatnagar/ed3caf50247cae8e3e1c",
                            sha1 = "3073e2ea147ce2818fa4e8841c6efa227378e1aa")$value
@@ -35,7 +35,7 @@ ggplot(data, aes(log(lambda.beta), ymin = lower, ymax = upper)) +
   facet_wrap(~lg, scales = "fixed", 
              labeller = as_labeller(appender, default = label_parsed)) + 
   theme(strip.background = element_blank()) + 
-    xlab(TeX("$\\log(\\lambda_{\\beta}}$"))
+    xlab(TeX("$\\log(\\lambda_{\\beta}}$)"))
 ```
 
 
