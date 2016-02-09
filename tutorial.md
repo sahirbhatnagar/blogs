@@ -10,7 +10,7 @@ title: Tutorials
 {:toc}-->
 
 * [Reproducible Research: An introduction to `knitr`](https://github.com/sahirbhatnagar/knitr-tutorial)
-
+* [Atelier sur le logiciel R](https://github.com/sahirbhatnagar/atelier-R-GERAD)
 
 
 <!--<p class="message">
