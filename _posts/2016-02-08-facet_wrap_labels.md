@@ -37,7 +37,7 @@ data <- devtools::source_gist("https://gist.github.com/sahirbhatnagar/ed3caf5024
     sha1 = "3073e2ea147ce2818fa4e8841c6efa227378e1aa")$value
 {% endhighlight %}
 
-Then we create a labelling function which takes as input a string and prepends $$\log(\lambda_{\gamma})$$ to it. Note that `TeX` is the workhorse function that parses $$\LaTeX$$ syntax so that `R` understands it. Otherwise it becomes very messy to try and write more complex math expressions in `R`.
+Then we create a labelling function which takes as input a string and prepends $$\log(\lambda_{\gamma})$$ to it. Note that `latex2exp::TeX` is the workhorse function that parses $$\LaTeX$$ syntax so that `R` understands it. Otherwise it becomes very messy to try and write more complex math expressions in `R`.
 
 
 {% highlight r %}
