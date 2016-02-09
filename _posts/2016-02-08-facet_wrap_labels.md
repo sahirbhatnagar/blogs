@@ -50,9 +50,10 @@ The code to produce the plot above is given by:
 
 {% highlight r %}
 ggplot(data, aes(log(lambda.beta), ymin = lower, ymax = upper)) + geom_errorbar(color = "grey") + 
-    geom_point(aes(x = log(lambda.beta), y = mse), colour = "red") + facet_wrap(~lg, 
-    scales = "fixed", labeller = as_labeller(appender, default = label_parsed)) + 
-    theme(strip.background = element_blank()) + xlab(TeX("$\\log(\\lambda_{\\beta}})$"))
+    geom_point(aes(x = log(lambda.beta), y = mse), colour = "red") + theme_bw() + 
+    facet_wrap(~lg, scales = "fixed", labeller = as_labeller(appender, 
+        default = label_parsed)) + theme(strip.background = element_blank(), 
+    strip.text.x = element_text(size = 12)) + xlab(TeX("$\\log(\\lambda_{\\beta})$"))
 {% endhighlight %}
 
 Note that we need to provide the `default = label_parsed` argument to the `facet_wrap` function so that it interprets the result from the `appender` function as math expressions.

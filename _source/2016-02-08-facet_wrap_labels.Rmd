@@ -15,7 +15,7 @@ opts_chunk$set(tidy = TRUE, warning = FALSE, message = FALSE)
 opts_template$set(
     fig.large = list(fig.width = 7, fig.height = 5, fig.align = 'center', fig.pos = 'h'),
     fig.small = list(fig.width = 6, fig.height = 4, fig.align = 'center', fig.pos = 'h'),
-    fig.full = list(fig.width = 9, fig.height = 7, fig.align = 'center', fig.pos = 'h')
+    fig.full = list(fig.width = 12, fig.height = 10, fig.align = 'center', fig.pos = 'h')
 )
 knit_hooks$set(crop = hook_pdfcrop)
 library(plotly)
@@ -26,16 +26,18 @@ In this post I show how we can use $$\LaTeX$$ math expressions to label the pane
 
 ```{r, echo=FALSE, opts.label = 'fig.full'}
 library(latex2exp)
+library(ggplot2)
 data <- devtools::source_gist("https://gist.github.com/sahirbhatnagar/ed3caf50247cae8e3e1c",
                            sha1 = "3073e2ea147ce2818fa4e8841c6efa227378e1aa")$value
 appender <- function(string) TeX(paste("$\\log(\\lambda_{\\gamma}) = $",string))  
 ggplot(data, aes(log(lambda.beta), ymin = lower, ymax = upper)) + 
   geom_errorbar(color = "grey") + 
   geom_point(aes(x = log(lambda.beta), y = mse), colour = "red") +
+  theme_bw() + 
   facet_wrap(~lg, scales = "fixed", 
              labeller = as_labeller(appender, default = label_parsed)) + 
-  theme(strip.background = element_blank()) + 
-    xlab(TeX("$\\log(\\lambda_{\\beta}}$)"))
+  theme(strip.background = element_blank(), strip.text.x = element_text(size = 12)) + 
+    xlab(TeX("$\\log(\\lambda_{\\beta})$"))
 ```
 
 
@@ -71,10 +73,11 @@ The code to produce the plot above is given by:
 ggplot(data, aes(log(lambda.beta), ymin = lower, ymax = upper)) + 
   geom_errorbar(color = "grey") + 
   geom_point(aes(x = log(lambda.beta), y = mse), colour = "red") +
+  theme_bw() + 
   facet_wrap(~lg, scales = "fixed", 
              labeller = as_labeller(appender, default = label_parsed)) + 
-  theme(strip.background = element_blank()) + 
-    xlab(TeX("$\\log(\\lambda_{\\beta}})$"))
+  theme(strip.background = element_blank(), strip.text.x = element_text(size = 12)) + 
+    xlab(TeX("$\\log(\\lambda_{\\beta})$"))
 ```
 
 Note that we need to provide the `default = label_parsed` argument to the `facet_wrap` function so that it interprets the result from the `appender` function as math expressions.
