@@ -15,7 +15,7 @@ opts_chunk$set(tidy = TRUE, warning = FALSE, message = FALSE)
 opts_template$set(
     fig.large = list(fig.width = 7, fig.height = 5, fig.align = 'center', fig.pos = 'h'),
     fig.small = list(fig.width = 6, fig.height = 4, fig.align = 'center', fig.pos = 'h'),
-    fig.full = list(fig.width = 12, fig.height = 10, fig.align = 'center', fig.pos = 'h')
+    fig.full = list(fig.width = 9, fig.height = 7, fig.align = 'center', fig.pos = 'h')
 )
 knit_hooks$set(crop = hook_pdfcrop)
 library(plotly)
