@@ -33,8 +33,8 @@ I have posted some sample data in a [GitHub Gist](https://gist.github.com/sahirb
 
 
 {% highlight r %}
-data <- devtools::source_gist("https://gist.github.com/sahirbhatnagar/ed3caf50247cae8e3e1c", 
-    sha1 = "3073e2ea147ce2818fa4e8841c6efa227378e1aa")$value
+data <- devtools::source_gist("https://gist.github.com/sahirbhatnagar/ed3caf50247cae8e3e1c",
+                           sha1 = "3073e2ea147ce2818fa4e8841c6efa227378e1aa")$value
 {% endhighlight %}
 
 Then we create a labelling function which takes as input a string and prepends $$\log(\lambda_{\gamma})$$ to it. Note that `latex2exp::TeX` is the workhorse function that parses $$\LaTeX$$ syntax so that `R` understands it. Otherwise it becomes very messy to try and write more complex math expressions in `R`.
@@ -42,18 +42,28 @@ Then we create a labelling function which takes as input a string and prepends $
 
 {% highlight r %}
 appender <- function(string) TeX(paste("$\\log(\\lambda_{\\gamma}) = $", 
-    string))
+                                       string))  
 {% endhighlight %}
 
 The code to produce the plot above is given by:
 
 
 {% highlight r %}
-ggplot(data, aes(log(lambda.beta), ymin = lower, ymax = upper)) + geom_errorbar(color = "grey") + 
-    geom_point(aes(x = log(lambda.beta), y = mse), colour = "red") + theme_bw() + 
-    facet_wrap(~lg, scales = "fixed", labeller = as_labeller(appender, 
-        default = label_parsed)) + theme(strip.background = element_blank(), 
-    strip.text.x = element_text(size = 12)) + xlab(TeX("$\\log(\\lambda_{\\beta})$"))
+ggplot(data, 
+       aes(log(lambda.beta), 
+           ymin = lower, 
+           ymax = upper)) + 
+    geom_errorbar(color = "grey") + 
+    geom_point(aes(x = log(lambda.beta), 
+                   y = mse), 
+               colour = "red") +
+    theme_bw() + 
+    facet_wrap(~lg, scales = "fixed", 
+               labeller = as_labeller(appender, 
+                                      default = label_parsed)) + 
+    theme(strip.background = element_blank(), 
+          strip.text.x = element_text(size = 12)) + 
+    xlab(TeX("$\\log(\\lambda_{\\beta})$"))
 {% endhighlight %}
 
 Note that we need to provide the `default = label_parsed` argument to the `facet_wrap` function so that it interprets the result from the `appender` function as math expressions.
