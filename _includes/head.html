@@ -8,9 +8,9 @@
 
   <title>
     {% if page.title == "Home" %}
-      {{ site.title }} &middot; {{ site.tagline }}
+    {{ site.title }} &middot; {{ site.tagline }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }}
+    {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
 
@@ -24,10 +24,24 @@
   <link rel="stylesheet" href="{{ site.baseurl }}academicons.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" >
   
+  <!-- for Facebook -->          
+  <meta property="og:title" content="Yogi Belly" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://yogibelly.com/img/cover.jpg" />
+  <meta property="og:url" content="http://yogibelly.com/" />
+  <meta property="og:description" content="Healthy Homemade Vegetarian Indian Food - Delivered to your door!" />
+
+  <!-- for Twitter -->          
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@yogi_belly">
+  <meta name="twitter:url" content="http://yogibelly.com/">
+  <meta name="twitter:title" content="Yogi Belly" />
+  <meta name="twitter:description" content="Healthy Homemade Vegetarian Indian Food - Delivered to your door!" />
+  <meta name="twitter:image" content="http://yogibelly.com/img/cover.jpg" />
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
+  <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
