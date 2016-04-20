@@ -79,6 +79,15 @@ comments: no
 
 ***
 
+
+### 2016
+
+* **Halifax, Canada** _5th Annual Canadian Human and Statistical Genetics Meeting._
+[A Model for Interpretable High Dimensional Interactions](https://figshare.com/articles/New_draft_item/3187435)
+
+<iframe src="https://widgets.figshare.com/articles/3187435/embed?show_title=1" width="568" height="716" frameborder="0"></iframe>
+
+
 ### 2015
 
 * **Vancouver, Canada** _4th Annual Canadian Human and Statistical Genetics Meeting._ **(Awarded Best Poster)**  
