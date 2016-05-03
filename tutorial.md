@@ -9,8 +9,11 @@ title: Tutorials
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}-->
 
+* [Introduction to LaTeX](http://www.slideshare.net/sahirbhatnagar/introduction-to-latex-45455707)
 * [Reproducible Research: An introduction to `knitr`](https://github.com/sahirbhatnagar/knitr-tutorial)
 * [Atelier sur le logiciel R](https://github.com/sahirbhatnagar/atelier-R-GERAD)
+* [Biostatistics in R](http://sahirbhatnagar.com/biosR/)
+
 
 
 <!--<p class="message">

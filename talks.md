@@ -14,6 +14,15 @@ comments: no
 
 ***
 
+### 2016
+
+* **McGill University**  _Department of Epidemiology, Biostatistics and Occupational Health (Sponsored by the Epidemiology, Biostatistics and Occupational Health Student Society)_  
+[Loops and Simulations in `R`](http://sahirbhatnagar.com/biosR/) 
+
+
+<br>
+
+
 ### 2015
 
 * **Universit&eacute; de Montr&eacute;al**  _GERAD: Groupe d'&eacute;tudes et de recherche en analyse des d&eacute;cisions_  
@@ -24,11 +33,18 @@ comments: no
 [Reproducible Research: An introduction to `knitr`](http://www.slideshare.net/sahirbhatnagar/mcgill-knitr)  
 [contents available on GitHub](https://github.com/sahirbhatnagar/knitr-tutorial)
 
-
+<br><br>
 
 ## Talks
 
 ***
+
+### 2016
+
+* **CHSGM 2015, Halifax** _Canadian Human and Statistical Genetics Meeting (Invited)_  
+[A Model for Interpretable High Dimensional Interactions](http://www.slideshare.net/sahirbhatnagar/a-model-for-interpretable-high-dimensional-interactions)
+
+<br>
 
 ### 2015
 
@@ -45,6 +61,7 @@ comments: no
 * **Lady Davis Institute** _Greenwood lab meeting_  
 [Making sense of Methylation and Expression data](http://www.slideshare.net/sahirbhatnagar/methylation-and-expression-data-integration)
 
+<br>
 
 ### 2014
 
@@ -57,6 +74,8 @@ comments: no
 * **Lady Davis Institute** _Statistical Genetics Journal Club_  
 [Transmission Ratio Distortion in Extended Families](/slides/TRDslides.html)
 
+<br>
+
 ### 2013
 
 * **Queen's University** _Department of Mathematics and Statistics Master's Thesis Defence_  
@@ -68,12 +87,14 @@ comments: no
 * **Queen's University** _Department of Public Health Sciences_  
 [Factors influencing participation in Colorectal Cancer screening](http://www.slideshare.net/sahirbhatnagar/coloretalcancer-3)
 
+<br>
+
 ### 2012
 
 * **Queen's University** _Department of Mathematics and Statistics_  
 [Computational methods for absolute risk estimation in Case-Cohort studies](http://www.slideshare.net/sahirbhatnagar/computational-45455967)
 
-
+<br><br>
 
 ## Posters
 
@@ -87,6 +108,7 @@ comments: no
 
 <iframe src="https://widgets.figshare.com/articles/3187435/embed?show_title=1" width="568" height="716" frameborder="0"></iframe>
 
+<br>
 
 ### 2015
 
@@ -94,6 +116,8 @@ comments: no
 [Integrating DNA Methylation and Gene Expression data in Placenta Tissue to Predict Childhood Obesity](http://figshare.com/articles/Integrating_DNA_Methylation_and_Gene_Expression_data_in_Placenta_Tissue_to_Predict_Childhood_Obesity/1380130)
 
 <iframe src="https://widgets.figshare.com/articles/1380130/embed?show_title=0" width="568" height="716" frameborder="0"></iframe>
+
+<br>
 
 ### 2014
 
