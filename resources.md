@@ -26,9 +26,10 @@ comments: no
 ## Mentors
 
 * [Celia Greenwood](http://www.mcgill.ca/statisticalgenetics/home-page)
-* [Mathieu Blanchette](http://en.wikipedia.org/wiki/Mathieu_Blanchette_%28computational_biologist%29)
+* [Mathieu Blanchette](http://cs.mcgill.ca/~blanchem/)
+* [Yi Yang](http://www.math.mcgill.ca/yyang/)
 * [Devon Lin](http://www.mast.queensu.ca/~cdlin/)
-* [Paul Peng](http://www.mast.queensu.ca/people/profiles/peng.php)
+* [Paul Peng](http://post.queensu.ca/~pengp/)
 * [James Hanley](http://www.medicine.mcgill.ca/epidemiology/hanley/)
 * [Olli Saarela](http://individual.utoronto.ca/osaarela/)
 * [Erica Moodie](http://www.medicine.mcgill.ca/epidemiology/moodie/)
