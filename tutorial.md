@@ -13,8 +13,10 @@ title: Tutorials
 * [Reproducible Research: An introduction to `knitr`](https://github.com/sahirbhatnagar/knitr-tutorial)
 * [Atelier sur le logiciel R](https://github.com/sahirbhatnagar/atelier-R-GERAD)
 * [Biostatistics in R](http://sahirbhatnagar.com/biosR/)
-* [GitHub for Data Scientists without the terminal](https://plot.ly/r/github-getting-started-for-data-scientists/)
+* [GitHub for Data Scientists without the terminal](http://sahirbhatnagar.com/git4ds/)
 * [Interactive Heat Maps for R](http://moderndata.plot.ly/interactive-heat-maps-for-r/)
+* [Power curves in R](http://moderndata.plot.ly/power-curves-r-plotly-ggplot2/)
+* [manhattanly: R package for interactive manhattan plots](http://moderndata.plot.ly/manhattanly-r-package-for-interactive-manhattan-plots/)
 
 
 
