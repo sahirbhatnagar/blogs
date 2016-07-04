@@ -44,7 +44,7 @@ comments: no
 * **Montreal Neurological Institute** _Ludmer Centre for Neuroinformatics and Mental Health_  
 [Methods for High Dimensional Interactions](http://www.slideshare.net/sahirbhatnagar/methods-for-high-dimensional-interactions)
 
-* **CHSGM 2016, Halifax** _Canadian Human and Statistical Genetics Meeting (Invited)_  
+* **CHSGM 2016, Halifax** _Canadian Human and Statistical Genetics Meeting (Contributed)_  
 [A Model for Interpretable High Dimensional Interactions](http://www.slideshare.net/sahirbhatnagar/a-model-for-interpretable-high-dimensional-interactions)
 
 <br>
@@ -55,7 +55,7 @@ comments: no
 [Introduction to knitr and RMarkdown](http://www.slideshare.net/sahirbhatnagar/an-introduction-to-knitr-and-r-markdown)
 
 
-* **CHSGM 2015, Vancouver** _Canadian Human and Statistical Genetics Meeting (Invited)_  
+* **CHSGM 2015, Vancouver** _Canadian Human and Statistical Genetics Meeting (Contributed)_  
 [DNA methylation and Expression to predict childhood obesity](http://www.slideshare.net/sahirbhatnagar/sahir-chsgm2015)
 
 * **Lady David Institute** _Statistical Genetics Journal Club_  
