@@ -54,6 +54,14 @@ comments: no
 
 ***
 
+## Screen capture to GIF in Ubuntu
+
+* [Byzanz](https://www.maketecheasier.com/record-screen-as-animated-gif-ubuntu/)
+
+
+
+***
+
 ## Websites
 
 * [Hands-On Data Science with R](http://onepager.togaware.com/)
