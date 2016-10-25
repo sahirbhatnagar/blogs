@@ -5,7 +5,15 @@ title: "Publications"
 
 ### 2016
 
-5. Klein Oros K, Oualkacha K, Lafond M, **Bhatnagar SR**, Tonin PN, Greenwood CMT (2016). Gene coexpression analyses differentiate networks associated with diverse cancers harbouring TP53 missense or null mutations. Submitted (2016/04)
+7. **Bhatnagar SR**, Yang Y, Blanchette M, Bouchard L, Greenwood CMT. _An analytic approach for interpretable predictive models in high dimensional data, in the presence of interactions with exposures_. Preprint. (2016+)
+
+
+6. Hamadani FT, **Bhatnagar SR**, Balvardi S, Trepanier M, Grushka J, Deckelbaum D, Court O, Fata P
+(2016). Burnout and Career Satisfaction Among Canadian General Surgeons: Results of the CAGS
+National Burnout Study. Submitted (2016/08).
+
+
+5. Klein Oros K, Oualkacha K, Lafond M, **Bhatnagar SR**, Tonin PN, Greenwood CMT (2016). _Gene coexpression analyses differentiate networks associated with diverse cancers harbouring TP53 missense or null mutations_. Frontiers in Genetics, section Statistical Genetics and Methodology. Aug 3:7:137.
 
 
 ### 2015
