@@ -16,6 +16,15 @@ comments: no
 
 ***
 
+
+## Giving a scientific talk
+
+* [Ten Secrets to Giving a Good Scientific Talk](http://www.cgd.ucar.edu/cms/agu/scientific_talk.html)
+
+
+
+***
+
 ## Statistics
 
 * [How to bootstrap correlated data](http://biostat.mc.vanderbilt.edu/wiki/Main/HowToBootstrapCorrelatedData)
