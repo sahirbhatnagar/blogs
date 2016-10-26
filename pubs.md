@@ -5,7 +5,7 @@ title: "Publications"
 
 ### 2016
 
-(8). **Bhatnagar SR**, Yang Y, Blanchette M, Bouchard L, Greenwood CMT. _An analytic approach for interpretable predictive models in high dimensional data, in the presence of interactions with exposures_. Preprint. (2016+)
+(8). **Bhatnagar SR**, Yang Y, Blanchette M, Bouchard L, Greenwood CMT. _An analytic approach for interpretable predictive models in high dimensional data, in the presence of interactions with exposures_. <a href="/slides/manuscript1_SB_v3.pdf">Preprint</a>. (2016+)
 
 
 (7). Hamadani FT, **Bhatnagar SR**, Balvardi S, Trepanier M, Grushka J, Deckelbaum D, Court O, Fata P
