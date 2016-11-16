@@ -15,15 +15,14 @@ National Burnout Study. Submitted (2016/08).
 
 (6). Klein Oros K, Oualkacha K, Lafond M, **Bhatnagar SR**, Tonin PN, Greenwood CMT (2016). _Gene coexpression analyses differentiate networks associated with diverse cancers harbouring TP53 missense or null mutations_. Frontiers in Genetics, section Statistical Genetics and Methodology. Aug 3:7:137.
 
+(5). **Bhatnagar S**, Greenwood CMT, Labbe A. _Assessing transmission ratio distortion in extended families: a comparison of analysis methods_. BMC Proceedings. 2016, 10(Suppl 7):12. [DOI 10.1186/s12919-016-0030-0](http://rdcu.be/mHtM)
+
+(4). Sun J, **Bhatnagar S**, Oualkacha K, Ciampi A, Greenwood CMT. _Joint analysis of multiple blood pressure phenotypes in GAW19 data by using a multivariate rare-variant association test_. BMC Proceedings. 2016, 10(Suppl 7):14. [DOI 10.1186/s12919-016-0048-3](http://rdcu.be/mHth)
+
 
 ### 2015
 
-(5). Wang Y, Murphy O, Turgeon M, Wang ZY, **Bhatnagar S**, Schulz J, and Moodie EEM. _The perils of Quasi-likelihood Information Criteria_. Stat. Feb 1;4(1):246-54.
-
-
-(4). **Bhatnagar S**, Greenwood CMT, Labbe A. _Assessing transmission ratio distortion in extended families: a comparison of analysis methods_. BMC Genetics. (Accepted 2015/01)
-
-(3). Sun J, **Bhatnagar S**, Oualkacha K, Ciampi A, Greenwood CMT. _Joint analysis of multiple blood pressure phenotypes in GAW19 data by using a multivariate rare-variant association test_. BMC Genetics. (Accepted 2015/01)
+(3). Wang Y, Murphy O, Turgeon M, Wang ZY, **Bhatnagar S**, Schulz J, and Moodie EEM. _The perils of Quasi-likelihood Information Criteria_. Stat. Feb 1;4(1):246-54.
 
 
 ### 2014
