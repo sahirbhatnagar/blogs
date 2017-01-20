@@ -9,7 +9,7 @@ title: About
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}-->
 
-![Slovenia](/img/me.jpg)
+![Slovenia](/img/me2.jpg)
 
 <p class="message">
 I'm a PhD candidate studying <a href="http://www.mcgill.ca/epi-biostat-occh/" target="_blank">Biostatistics</a> at <a href="http://mcgill.ca" target="_blank">McGill Univeristy</a> under the supervision of <a href="http://www.mcgill.ca/statisticalgenetics/" target="_blank">Dr. Celia Greenwood</a>, <a href="http://cs.mcgill.ca/~blanchem/" target="_blank">Dr. Mathieu Blanchette</a> and <a href="http://www.math.mcgill.ca/yyang/" target="_blank">Dr. Yi Yang</a>.  
