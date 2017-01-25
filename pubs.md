@@ -3,10 +3,11 @@ layout: page
 title: "Publications"
 ---
 
+### 2017
+
+(8). **Bhatnagar SR**, Yang Y, Khundrakpam B, Evans A, Blanchette M, Bouchard L, Greenwood CMT. _An analytic approach for interpretable predictive models in high dimensional data, in the presence of interactions with exposures_. <a href="https://doi.org/10.1101/102475">Preprint</a>. (2017+)
+
 ### 2016
-
-(8). **Bhatnagar SR**, Yang Y, Blanchette M, Bouchard L, Greenwood CMT. _An analytic approach for interpretable predictive models in high dimensional data, in the presence of interactions with exposures_. <a href="/slides/manuscript1_SB_v4.pdf">Preprint</a>. (2016+)
-
 
 (7). Hamadani FT, **Bhatnagar SR**, Balvardi S, Trepanier M, Grushka J, Deckelbaum D, Court O, Fata P
 (2016). Burnout and Career Satisfaction Among Canadian General Surgeons: Results of the CAGS

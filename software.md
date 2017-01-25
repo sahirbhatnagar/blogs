@@ -7,7 +7,8 @@ title: "Software"
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/acm4r)](https://cran.r-project.org/package=acm4r) ![](http://cranlogs.r-pkg.org/badges/grand-total/acm4r?color=blue)
 Fragment lengths or molecular weights from pairs of lanes are compared, and a number of matching bands are calculated using the Align-and-Count Method.
 
-* [eclust](http://sahirbhatnagar.com/eclustProject/)  
+* [eclust](http://sahirbhatnagar.com/eclust/)
+[![Travis-CI Build Status](https://travis-ci.org/sahirbhatnagar/eclust.svg?branch=master)](https://travis-ci.org/sahirbhatnagar/eclust) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/eclust)](https://cran.r-project.org/package=eclust)  
 A Statistical Software Tool for the Analysis of High-Dimensional Interactions. This software is written in the open source software environment R. It's main functionality is to fit statistical models for analyzing interactions between a high dimensional dataset (e.g. genomics, brain imaging), the environment and a response.
 
 * [casebase](http://sahirbhatnagar.com/casebase/)  
