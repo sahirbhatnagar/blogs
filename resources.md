@@ -27,6 +27,7 @@ comments: no
 
 ## Statistics
 
+* [Jacob Bien](http://faculty.bscb.cornell.edu/~bien/)
 * [How to bootstrap correlated data](http://biostat.mc.vanderbilt.edu/wiki/Main/HowToBootstrapCorrelatedData)
 * Principal Component Analysis: [Link 1](http://people.maths.ox.ac.uk/richardsonm/SignalProcPCA.pdf), [Link 2](http://setosa.io/ev/principal-component-analysis/), [Link 3](http://gastonsanchez.com/teaching/)
 

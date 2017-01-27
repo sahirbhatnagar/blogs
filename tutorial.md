@@ -17,8 +17,11 @@ title: Tutorials
 * [Interactive Heat Maps for R](http://moderndata.plot.ly/interactive-heat-maps-for-r/)
 * [Power curves in R](http://moderndata.plot.ly/power-curves-r-plotly-ggplot2/)
 * [manhattanly: R package for interactive manhattan plots](http://moderndata.plot.ly/manhattanly-r-package-for-interactive-manhattan-plots/)
-
-
+* [7 Interactive Plots from the Pharmaceutical Industry](http://moderndata.plot.ly/pharmaceutical-survival-interactive/)
+* [7 Interactive Bioinformatics Plots Made in Python and R](http://moderndata.plot.ly/bioinformatics-plots-made-in-python-and-r/)
+* [Interactive Volcano Plots in R with Plotly](http://moderndata.plot.ly/interactive-volcano-plots-r-plotly/)
+* [Principal Component Analysis Cluster Plots with Plotly](http://moderndata.plot.ly/principal-component-analysis-cluster-plotly/)
+* [Interactive Q-Q Plots in R using Plotly](http://moderndata.plot.ly/interactive-qq-plots-r-plotly/)
 
 <!--<p class="message">
   Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
