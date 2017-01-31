@@ -36,7 +36,7 @@ comments: no
 
 ## Building Websites
 
-* [Minimal Blog Using Jekyll, Github Pages, and poole](http://joshualande.com/jekyll-github-pages-poole/)
+* [Minimal Blog Using Jekyll, Github Pages, and poole](http://joshualande.com/jekyll-github-pages-poole)
 * [Jekyll By Example](https://www.andrewmunsell.com/tutorials/jekyll-by-example)
 * [Serve Jekyll Websites with servr and knitr](http://yihui.name/knitr-jekyll/2014/09/jekyll-with-knitr.html)
 * [Automate Publishing of Websites using Travis CI and GitHub Pages](https://bookdown.org/yihui/bookdown/github.html).
