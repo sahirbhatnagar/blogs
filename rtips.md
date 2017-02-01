@@ -149,7 +149,19 @@ servr::jekyll(script = "_knitr/build.R", serve = FALSE, command = '/home/sahir/.
 
 
 
+***
 
+* Find out which pandoc `rmarkdown::render` is using:
+
+{% highlight r %}
+Sys.getenv("RSTUDIO_PANDOC")
+{% endhighlight %}
+
+To set the pandoc that you want it to use, enter the following in your `.Renviron` file (which should be in your `$HOME` directory):
+
+{% highlight bash %}
+RSTUDIO_PANDOC=/path/to/pandoc
+{% endhighlight %}
 
 
 
