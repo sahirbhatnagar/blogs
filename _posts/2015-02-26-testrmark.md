@@ -9,8 +9,6 @@ tags:
 comments: yes 
 ---
 
-<button onclick="TogetherJS(this); return false;">Start TogetherJS</button>
-
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
  
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
@@ -36,7 +34,7 @@ summary(cars)
 
 You can also embed plots, for example:
 
-![plot of chunk cars](/figure/posts/2015-02-26-testrmark/cars-1.png) 
+![plot of chunk cars](/figure/posts/2015-02-26-testrmark/cars-1.png)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
@@ -73,7 +71,7 @@ summary(fit<-lm(speed~dist, cars))
 plot(fit)   
 {% endhighlight %}
 
-![plot of chunk lmplot](/figure/posts/2015-02-26-testrmark/lmplot-1.png) ![plot of chunk lmplot](/figure/posts/2015-02-26-testrmark/lmplot-2.png) ![plot of chunk lmplot](/figure/posts/2015-02-26-testrmark/lmplot-3.png) ![plot of chunk lmplot](/figure/posts/2015-02-26-testrmark/lmplot-4.png) 
+![plot of chunk lmplot](/figure/posts/2015-02-26-testrmark/lmplot-1.png)![plot of chunk lmplot](/figure/posts/2015-02-26-testrmark/lmplot-2.png)![plot of chunk lmplot](/figure/posts/2015-02-26-testrmark/lmplot-3.png)![plot of chunk lmplot](/figure/posts/2015-02-26-testrmark/lmplot-4.png)
 
 $$ \mathcal{L}(\theta) = \prod_{i=1}^{n} (1-\alpha \beta \gamma) $$
 

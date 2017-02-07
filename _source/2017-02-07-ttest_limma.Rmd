@@ -1,0 +1,105 @@
+---
+title: "Limma Moderated and Ordinary t-statistics"
+author: "sahir"
+date: "February 7, 2017"
+output: html_document
+layout: post
+tags: [R, statistics, t test, genomics, limma]
+permalink: limma_ttest
+comments: yes
+---
+
+When analyzing large amounts of genetic and genomic data, the first line of analysis is usually some sort of univariate test. That is, conduct a statistical test for each SNP or CpG site or Gene and then correct for multiple testing. The [limma](https://bioconductor.org/packages/release/bioc/html/limma.html) package on Bioconductor is a popular method for computing _moderated_ t-statistics using a combination of the `limma::lmFit` and `limma::eBayes` functions. In this post, I show how to calculate the _ordinary_ t-statistics from `limma` output.
+
+
+<!--more-->
+
+```{r setup, echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
+library(knitr)
+opts_chunk$set(tidy = FALSE)
+```
+
+
+First we load the required packages
+```{r data, echo=TRUE}
+# clear workspace
+rm(list=ls())
+
+if (!requireNamespace("pacman", quietly = TRUE)) 
+  install.packages("pacman")
+
+# this will install (if you dont already have it) and load the package
+pacman::p_load("minfi")
+pacman::p_load("minfiData")
+pacman::p_load("limma")
+pacman::p_load("CpGassoc")
+
+# check the data that is available in the minfiData package
+pacman::p_data("minfiData")
+```
+
+Next, we extract some sample data and create a covariate of interest
+```{r}
+# get the M-values for the sample data
+DT <- minfi::getM(MsetEx.sub)
+
+dim(DT)
+
+# rows are CpGs and columns are samples
+head(DT)
+
+# create a fake covariate. 3 intact and 3 degraded samples
+tissue <- factor(c(rep("Intact",3), rep("Degraded",3)))
+design <- model.matrix(~ tissue)
+```
+
+Then we calculate the moderated and ordinary t-statistics and compare them:
+```{r}
+# limma fit
+fit <- lmFit(DT, design)
+fit_ebayes <- eBayes(fit)
+
+# ordinary t-statistic
+ordinary.t <- fit$coefficients[,"tissueIntact"] / 
+  fit$stdev.unscaled[,"tissueIntact"] / 
+  fit$sigma
+
+plot(x = ordinary.t, 
+     y = fit_ebayes$t[,"tissueIntact"], 
+     xlab = "ordinary t-statistic", 
+     ylab = "moderated t-statistic")
+abline(a = 0, b = 1, col = "red")
+```
+
+
+We can calculate the corresponding p-values from the ordinary t-statistics. This is given by 
+```{r}
+# t-distribution with n-p-1 degrees of freedom 
+# (n: number of samples, p:number of covariates excluding intercept)
+ordinary.pvalue <- pt(q = abs(ordinary.t), 
+                      df = dim(DT)[2]-(ncol(design)-1)-1, 
+                      lower.tail = F) * 2
+```
+
+We can also use the [`CpGassoc`](https://cran.r-project.org/package=CpGassoc) package to calculate ordinary t-statistics and compare the result to our manual calculations:
+
+```{r}
+# compare result with CpGassoc package (regular t-test)
+t_test_mvalues <- CpGassoc::cpg.assoc(
+  beta.val = minfi::getBeta(MsetEx.sub),
+  indep = tissue,
+  fdr.cutoff = 0.05,
+  logit.transform = TRUE)
+
+# these should be equal
+plot(t_test_mvalues$results$P.value, ordinary.pvalue)
+abline(a = 0, b = 1, col = "red")
+
+# t-statistic is the squared F.statistic (in certain cases) 
+plot(t_test_mvalues$results$F.statistic, ordinary.t^2)
+abline(a = 0, b = 1, col = "red")
+```
+
+
+
+
