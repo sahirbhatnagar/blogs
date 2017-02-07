@@ -18,7 +18,9 @@ opts_template$set(
     fig.full = list(fig.width = 9, fig.height = 7, fig.align = 'center', fig.pos = 'h')
 )
 knit_hooks$set(crop = hook_pdfcrop)
-library(plotly)
+if (!requireNamespace("pacman", quietly = TRUE)) 
+  install.packages("pacman")
+pacman::p_load(plotly)
 py <- plotly("sahirbhatnagar", "qpxgmagarx")
 ```
 
@@ -92,6 +94,7 @@ to representing nominal or categorical data
 
 To see the palettes available for coloring the heatmap:
 ```{r, crop = TRUE, opts.label = 'fig.full'}
+pacman::p_load(RColorBrewer)
 RColorBrewer::display.brewer.all()
 ```
 
@@ -134,6 +137,7 @@ head(annotation_row)
 You need to decide if its important to cluster the rows and/or columns of your heatmap. If you decide to cluster, you must then choose the [distance metric](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/dist.html) to use and the [clustering method](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/hclust.html). 
 The pheatmap comes with lots of customizations (see the [help page](http://cran.r-project.org/web/packages/pheatmap/pheatmap.pdf) for a complete list of options). In this example I only want to cluster the genes (i.e. the rows), and place a gap between subject who were exposed and unexposed. Note that we must pass the transpose of the matrix for the `pheatmap` function, which is not the case for other functions such as `gplots::heatmap.2`.
 ```{r, crop = TRUE, opts.label = 'fig.full', tidy=FALSE}
+pacman::p_load(pheatmap)
 pheatmap::pheatmap(t(genes), 
                    cluster_row = T,
                    cluster_cols = F,
@@ -156,8 +160,7 @@ pheatmap::pheatmap(t(genes),
 It is also possible to create Interactive heatmaps (in the sense that you can see the actual values by hovering your mouse over the plot) using the [`d3heatmap`](https://github.com/rstudio/d3heatmap) pacakge available on github:
 
 ```{r, eval=FALSE}
-if (!require("devtools")) install.packages("devtools")
-devtools::install_github("rstudio/d3heatmap")
+pacman::p_install_gh("rstudio/d3heatmap")
 ```
 
 This is useful if you are producible markdown reports. The syntax is standard, though does not allow for multiple annotations as in `pheatmap`.
@@ -177,7 +180,7 @@ After some user setup (see the plotly [help page](https://plot.ly/r/getting-star
 
 ```{r}
 expression <- t(genes)
-plot_ly(z = expression,colorscale = col.pal, type = "heatmap")
+plotly::plot_ly(z = expression,colorscale = col.pal, type = "heatmap")
 ```
 
 ----

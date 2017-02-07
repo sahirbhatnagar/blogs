@@ -15,20 +15,16 @@ In this post I show how we can use $$\LaTeX$$ math expressions to label the pane
 
 
 {% highlight text %}
-## Error in library(latex2exp): there is no package called 'latex2exp'
-{% endhighlight %}
-
-
-
-{% highlight text %}
 ## Error in r_files[[which]]: invalid subscript type 'closure'
 {% endhighlight %}
 
 
 
 {% highlight text %}
-## Error in labs(x = label): could not find function "TeX"
+## Error in combine_vars(data, params$plot_env, vars, drop = params$drop): At least one layer must contain all variables used for facetting
 {% endhighlight %}
+
+<img src="/figure/posts/2016-02-08-facet_wrap_labels/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 
 

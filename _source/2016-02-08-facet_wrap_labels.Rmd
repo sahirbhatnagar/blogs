@@ -25,8 +25,11 @@ py <- plotly("sahirbhatnagar", "qpxgmagarx")
 In this post I show how we can use $$\LaTeX$$ math expressions to label the panels in facets to produce the following plot:
 
 ```{r, echo=FALSE, opts.label = 'fig.full'}
-library(latex2exp)
-library(ggplot2)
+if (!requireNamespace("pacman", quietly = TRUE)) 
+  install.packages("pacman")
+
+pacman::p_load(latex2exp)
+pacman::p_load(ggplot2)
 data <- devtools::source_gist("https://gist.github.com/sahirbhatnagar/ed3caf50247cae8e3e1c",
                            sha1 = "3073e2ea147ce2818fa4e8841c6efa227378e1aa")$value
 appender <- function(string) TeX(paste("$\\log(\\lambda_{\\gamma}) = $",string))  
