@@ -161,6 +161,7 @@ It is also possible to create Interactive heatmaps (in the sense that you can se
 
 ```{r, eval=FALSE}
 pacman::p_install_gh("rstudio/d3heatmap")
+pacman::p_load(webshot)
 ```
 
 This is useful if you are producible markdown reports. The syntax is standard, though does not allow for multiple annotations as in `pheatmap`.

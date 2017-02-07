@@ -13,17 +13,6 @@ comments: yes
 
 In this post I show how we can use $$\LaTeX$$ math expressions to label the panels in facets to produce the following plot:
 
-
-{% highlight text %}
-## Error in r_files[[which]]: invalid subscript type 'closure'
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in combine_vars(data, params$plot_env, vars, drop = params$drop): At least one layer must contain all variables used for facetting
-{% endhighlight %}
-
 <img src="/figure/posts/2016-02-08-facet_wrap_labels/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 
@@ -44,14 +33,7 @@ I have posted some sample data in a [GitHub Gist](https://gist.github.com/sahirb
 
 
 {% highlight r %}
-data <- devtools::source_gist("https://gist.github.com/sahirbhatnagar/ed3caf50247cae8e3e1c",
-                              sha1 = "3073e2ea147ce2818fa4e8841c6efa227378e1aa")$value
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Error in r_files[[which]]: invalid subscript type 'closure'
+data <- devtools::source_gist(id = "ed3caf50247cae8e3e1c", filename = "facet_data.R")$value
 {% endhighlight %}
 
 Then we create a labelling function which takes as input a string and prepends $$\log(\lambda_{\gamma})$$ to it. Note that `latex2exp::TeX` is the workhorse function that parses $$\LaTeX$$ syntax so that `R` understands it. Otherwise it becomes very messy to try and write more complex math expressions in `R`.

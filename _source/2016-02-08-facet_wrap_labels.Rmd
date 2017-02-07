@@ -18,7 +18,7 @@ opts_template$set(
     fig.full = list(fig.width = 9, fig.height = 7, fig.align = 'center', fig.pos = 'h')
 )
 knit_hooks$set(crop = hook_pdfcrop)
-library(plotly)
+pacman::p_load(plotly)
 py <- plotly("sahirbhatnagar", "qpxgmagarx")
 ```
 
@@ -30,8 +30,7 @@ if (!requireNamespace("pacman", quietly = TRUE))
 
 pacman::p_load(latex2exp)
 pacman::p_load(ggplot2)
-data <- devtools::source_gist("https://gist.github.com/sahirbhatnagar/ed3caf50247cae8e3e1c",
-                           sha1 = "3073e2ea147ce2818fa4e8841c6efa227378e1aa")$value
+data <- devtools::source_gist(id = "ed3caf50247cae8e3e1c", filename = "facet_data.R")$value
 appender <- function(string) TeX(paste("$\\log(\\lambda_{\\gamma}) = $",string))  
 ggplot(data, 
        aes(log(lambda.beta), 
@@ -63,8 +62,7 @@ You will need to load the following packages for the code below to work:
 I have posted some sample data in a [GitHub Gist](https://gist.github.com/sahirbhatnagar/ed3caf50247cae8e3e1c) which you can import into your `R` session using the `source_gist` function from the devtools package:
 
 ```{r}
-data <- devtools::source_gist("https://gist.github.com/sahirbhatnagar/ed3caf50247cae8e3e1c",
-                              sha1 = "3073e2ea147ce2818fa4e8841c6efa227378e1aa")$value
+data <- devtools::source_gist(id = "ed3caf50247cae8e3e1c", filename = "facet_data.R")$value
 ```
 
 Then we create a labelling function which takes as input a string and prepends $$\log(\lambda_{\gamma})$$ to it. Note that `latex2exp::TeX` is the workhorse function that parses $$\LaTeX$$ syntax so that `R` understands it. Otherwise it becomes very messy to try and write more complex math expressions in `R`.
