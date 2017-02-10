@@ -8,7 +8,8 @@ title: About
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}-->
 
-![Slovenia](/img/mehydepark.jpg)
+![](/img/mehydepark.jpg)
+*photo credit: Amir Allan Kahnamouee, location: Hyde park in London*
 
 
 <p class="message">
