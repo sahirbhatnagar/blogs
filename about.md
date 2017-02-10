@@ -9,7 +9,7 @@ title: About
 {:toc}-->
 
 ![](/img/mehydepark.jpg)
-*photo credit: Amir Allan Kahnamouee, location: Hyde park in London*
+*photo cred: Amir Kahnamouee, location: Hyde park in London*
 
 
 <p class="message">
