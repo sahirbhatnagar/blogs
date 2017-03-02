@@ -1,0 +1,231 @@
+---
+title: "Bayesian Non-Linear Multilevel Models"
+author: "Sahir"
+date: "February 23, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Consider the following repeated measures model:
+
+\[y_{ij} = \beta_1 a_{ij}  + \beta_1^2 b_{ij} + \mu_i + \varepsilon_{ij}\]
+
+for $i = 1, \ldots, n$, $j = 1, 2$ where $n$ is the sample size, $j$ represents the index of the repeated measure, i.e., each subject has two measurements, $\mu_i$ is a normally distributed random effect, $\varepsilon_{ij}$ is a normally distributed error term, $y_{ij}$ is the continuous response, and $a_{ij}, b_{ij}$ are covariates. This is a multilevel model because of the nested structure of the data, and also non-linear in the $\beta_1$ parameter. In this post I simulate some data under this model, and try to leverage Bayesian computation techniques to estimate the parameters using the [brms](https://github.com/paul-buerkner/brms) which is an interface to fit Bayesian generalized (non-)linear multilevel models using [Stan](http://mc-stan.org/).
+
+![](http://i.imgur.com/r0IXN1w.jpg)
+
+<!--more-->
+
+
+```{r, eval=FALSE, echo=FALSE}
+knitr::knit_exit()
+```
+
+
+## Load Packages
+
+We first load the required packages:
+
+```{r}
+if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
+pacman::p_load('brms')
+```
+
+
+## Simulate Data (n = 500, two timepoints)
+
+Next I simulate some multilevel data:
+
+```{r}
+rm(list=ls())
+
+# number of subjects
+n = 500
+
+# number of time points
+t = 2
+
+# SNR
+signal_to_noise_ratio = 2
+
+# true coefficient value
+b <- 3
+
+# simulate independent covariates
+A <- rgamma(n*t, shape = 3)
+B <- rnorm(n*t)
+
+# random effect: same for time 1 and time 2
+random_eff <- rpois(n, lambda = 10)
+
+y.star <- b * A + b^2 * B + rep(random_eff,2)
+error <- rnorm(n*t)
+k <- sqrt(stats::var(y.star)/(signal_to_noise_ratio*stats::var(error)))
+
+# response
+yij <- y.star + k*error 
+
+dat1 <- data.frame(yij, aij = A, bij = B, ID = rep(1:n, times = 2))
+```
+
+
+## Fit Non-linear Multilevel Bayesian Model
+
+We first need to specify priors for $\beta_1$ and the random effect $\mu_i$. I have found the easiest way to do this, is to first get information for which priors may be specified using the `brms::get_prior` function:
+
+```{r}
+(prior <- brms::get_prior(brms::bf(yij ~ beta * aij + (beta^2) * bij + mui, 
+                                   mui ~ 1 + (1|ID),
+                                   beta ~ 1, 
+                                   nl = TRUE),
+                          data = dat1, 
+                          family = gaussian()))
+```
+
+The `nl = TRUE` argument indicates that this should be treated as a non-linear model. We need to specify priors for the population level effects as well as the standard deviation of the random effect (what is referred to as group-level effects in the output):
+
+```{r}
+prior$prior[c(2,4)] <- "normal(0,10)"
+prior$prior[8] <- "student_t(3, 0, 11)"
+prior
+```
+
+We can check the corresponding STAN code to verify that the prior information has been updated accordingly using the `brms::make_stancode` function:
+
+```{r}
+brms::make_stancode(bf(yij ~ beta * aij + (beta^2) * bij + mui, 
+                       mui ~ 1 +  (1|ID),
+                       beta ~ 1, 
+                       nl = TRUE),
+                    data = dat1, 
+                    family = gaussian(),
+                    prior = prior)
+```
+
+Next we fit the model with 6 Markov chains:
+
+```{r}
+# refresh = 0 to surpress output
+fit1 <- brms::brm(bf(yij ~ beta * aij + (beta^2) * bij + mui, 
+               mui ~ 1 + (1|ID),
+               beta ~ 1, 
+               nl = TRUE),
+            data = dat1, 
+            family = gaussian(),
+            prior = prior,
+            control = list(adapt_delta = 0.9),
+            iter = 10000, thin = 2, chains = 6, cores = 6, refresh = 0)
+```
+
+We can check the summary to see if the model was able to accurately estimate $\beta_1$: 
+
+```{r}
+summary(fit1)
+```
+
+The estimate of interest in the output above is `beta_Intercept` under `Population-Level Effects`. This corresponds to the estimate of $\beta_1$ in the equation above. We see that the estimate is close to the true value of 3. We also see that the estimate of the standard deviation of the random effect is 2.99 [95% CI: 1.64, 3.98], indicating a strong subject specific effect (which is what we would expect since we generated the data this way). 
+
+We can also plot some model diagnostics to ensure proper mixing of the Markov chains:
+
+```{r}
+plot(fit1)
+plot(marginal_effects(fit1), points = TRUE, ask = FALSE)
+```
+
+
+
+
+
+```{r, echo=FALSE}
+knitr::knit_exit()
+```
+
+
+
+
+```{r, echo=FALSE, eval=FALSE}
+
+y2 <- rho * rnorm(n) + sqrt(1-rho^2) * y1
+
+cor(y1,y2)
+
+mvrnorm(n = n, mu = rep(b[1] + b[2]*A + b[2]^2 * B,2), Sigma = matrix(c(10,3,3,2),2,2))
+
+
+
+
+# Covariate a (for timepoints 1 and 2)
+# SigmaA <- matrix(c(10,3,3,2),2,2)
+# A <- mvrnorm(n = 500, rep(0, 2), SigmaA)
+
+
+
+# Covariate b (for timepoints 1 and 2)
+# SigmaB <- matrix(c(10,1,1,0.5), 2,2)
+# B <- mvrnorm(n = 500, rep(0, 2), SigmaB)
+B <- rnorm(500)
+
+
+yi1 <-  b[1] + b[2]*aij + b[2]^2 * bij 
+
+# generate covariates for 1st observation for each of the 500 subjects
+
+
+rm(list=ls())
+b <- c(1,4)
+n = 500 ; t = 2
+A <- rnorm(n)
+B <- rnorm(n)
+random_eff <- rnorm(500)
+signal_to_noise_ratio = 2
+
+Y1 <- b[1] + b[2]*A + b[2]^2 * B + rep(random_eff, 1)
+# error <- rnorm(n)
+# k <- sqrt(stats::var(y.star)/(signal_to_noise_ratio*stats::var(error)))
+# # response for time 1
+# Y1 <- y.star + k*error
+# plot(density(y))
+
+
+correlatedValue = function(x, r){
+  r2 = r**2
+  ve = 1-r2
+  SD = sqrt(ve)
+  e  = rnorm(length(x), mean=0, sd=SD)
+  y  = r*x + e
+  return(y)
+}
+
+Y2 = correlatedValue(x = Y1, r=.1)
+
+cor(Y1,Y2)
+
+dat1 <- data.frame(yij = c(Y1,Y2), aij = c(A, rnorm(500)), bij = c(rnorm(500),B), ID = rep(1:500, times = 2))
+head(dat1)
+
+cor(dat1$yij[1:500],dat1$yij[501:1000])
+```
+
+
+
+
+```{r, echo=FALSE, eval=FALSE}
+# Read data as long table
+url <- "https://raw.githubusercontent.com/mages/diesunddas/master/Data/ClarkTriangle.csv"
+dat <- read.csv(url)
+dat$origin <- dat$AY-min(dat$AY)+1
+dat <- dat[order(dat$dev),]
+# Add future dev years
+nyears <- 12
+newdat <- data.frame(
+  origin=rep(1:10, each=nyears),
+  AY=rep(sort(unique(dat$AY)), each=nyears),  
+  dev=rep(seq(from=6, to=nyears*12-6, by=12), 10)
+)
+newdat <- merge(dat, newdat, all=TRUE)
+newdat <- newdat[order(newdat$dev),]
+```
+
