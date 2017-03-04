@@ -3,17 +3,21 @@ title: "Bayesian Non-Linear Multilevel Models"
 author: "Sahir"
 date: "February 23, 2017"
 output: html_document
+layout: post
+tags: [R, regression, Bayesian, Multilevel]
+permalink: bayesian-stan
+comments: yes
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, tidy = FALSE)
 ```
 
 Consider the following repeated measures model:
 
-\[y_{ij} = \beta_1 a_{ij}  + \beta_1^2 b_{ij} + \mu_i + \varepsilon_{ij}\]
+$$ y_{ij} = \beta_1 a_{ij}  + \beta_1^2 b_{ij} + \mu_i + \varepsilon_{ij}$$
 
-for $i = 1, \ldots, n$, $j = 1, 2$ where $n$ is the sample size, $j$ represents the index of the repeated measure, i.e., each subject has two measurements, $\mu_i$ is a normally distributed random effect, $\varepsilon_{ij}$ is a normally distributed error term, $y_{ij}$ is the continuous response, and $a_{ij}, b_{ij}$ are covariates. This is a multilevel model because of the nested structure of the data, and also non-linear in the $\beta_1$ parameter. In this post I simulate some data under this model, and try to leverage Bayesian computation techniques to estimate the parameters using the [brms](https://github.com/paul-buerkner/brms) which is an interface to fit Bayesian generalized (non-)linear multilevel models using [Stan](http://mc-stan.org/).
+for $$i = 1, \ldots, n$$, $$j = 1, 2$$ where $$n$$ is the sample size, $$j$$ represents the index of the repeated measure, i.e., each subject has two measurements, $$\mu_i$$ is a normally distributed random effect, $$\varepsilon_{ij}$$ is a normally distributed error term, $$y_{ij}$$ is the continuous response, and $$a_{ij}, b_{ij}$$ are covariates. This is a multilevel model because of the nested structure of the data, and also non-linear in the $$\beta_1$$ parameter. In this post I simulate some data under this model, and try to leverage Bayesian computation techniques to estimate the parameters using the [brms](https://github.com/paul-buerkner/brms) which is an interface to fit Bayesian generalized (non-)linear multilevel models using [Stan](http://mc-stan.org/).
 
 ![](http://i.imgur.com/r0IXN1w.jpg)
 
@@ -30,7 +34,8 @@ knitr::knit_exit()
 We first load the required packages:
 
 ```{r}
-if (!requireNamespace("pacman", quietly = TRUE)) install.packages("pacman")
+if (!requireNamespace("pacman", quietly = TRUE)) 
+  install.packages("pacman")
 pacman::p_load('brms')
 ```
 
@@ -49,7 +54,7 @@ n = 500
 t = 2
 
 # SNR
-signal_to_noise_ratio = 2
+SNR = 2
 
 # true coefficient value
 b <- 3
@@ -63,26 +68,30 @@ random_eff <- rpois(n, lambda = 10)
 
 y.star <- b * A + b^2 * B + rep(random_eff,2)
 error <- rnorm(n*t)
-k <- sqrt(stats::var(y.star)/(signal_to_noise_ratio*stats::var(error)))
+k <- sqrt(stats::var(y.star)/(SNR*stats::var(error)))
 
 # response
 yij <- y.star + k*error 
 
-dat1 <- data.frame(yij, aij = A, bij = B, ID = rep(1:n, times = 2))
+dat1 <- data.frame(yij, 
+                   aij = A, 
+                   bij = B, 
+                   ID = rep(1:n, times = 2))
 ```
 
 
 ## Fit Non-linear Multilevel Bayesian Model
 
-We first need to specify priors for $\beta_1$ and the random effect $\mu_i$. I have found the easiest way to do this, is to first get information for which priors may be specified using the `brms::get_prior` function:
+We first need to specify priors for $$\beta_1$$ and the random effect $$\mu_i$$. I have found the easiest way to do this, is to first get information for which priors may be specified using the `brms::get_prior` function:
 
 ```{r}
-(prior <- brms::get_prior(brms::bf(yij ~ beta * aij + (beta^2) * bij + mui, 
-                                   mui ~ 1 + (1|ID),
-                                   beta ~ 1, 
-                                   nl = TRUE),
-                          data = dat1, 
-                          family = gaussian()))
+(prior <- brms::get_prior(
+  brms::bf(yij ~ beta * aij + (beta^2) * bij + mui, 
+           mui ~ 1 + (1|ID),
+           beta ~ 1, 
+           nl = TRUE),
+  data = dat1, 
+  family = gaussian()))
 ```
 
 The `nl = TRUE` argument indicates that this should be treated as a non-linear model. We need to specify priors for the population level effects as well as the standard deviation of the random effect (what is referred to as group-level effects in the output):
@@ -96,37 +105,43 @@ prior
 We can check the corresponding STAN code to verify that the prior information has been updated accordingly using the `brms::make_stancode` function:
 
 ```{r}
-brms::make_stancode(bf(yij ~ beta * aij + (beta^2) * bij + mui, 
-                       mui ~ 1 +  (1|ID),
-                       beta ~ 1, 
-                       nl = TRUE),
-                    data = dat1, 
-                    family = gaussian(),
-                    prior = prior)
+brms::make_stancode(
+  bf(yij ~ beta * aij + (beta^2) * bij + mui, 
+     mui ~ 1 +  (1|ID),
+     beta ~ 1, 
+     nl = TRUE),
+  data = dat1, 
+  family = gaussian(),
+  prior = prior)
 ```
 
 Next we fit the model with 6 Markov chains:
 
 ```{r}
 # refresh = 0 to surpress output
-fit1 <- brms::brm(bf(yij ~ beta * aij + (beta^2) * bij + mui, 
-               mui ~ 1 + (1|ID),
-               beta ~ 1, 
-               nl = TRUE),
-            data = dat1, 
-            family = gaussian(),
-            prior = prior,
-            control = list(adapt_delta = 0.9),
-            iter = 10000, thin = 2, chains = 6, cores = 6, refresh = 0)
+fit1 <- brms::brm(
+  bf(yij ~ beta * aij + (beta^2) * bij + mui, 
+     mui ~ 1 + (1|ID),
+     beta ~ 1, 
+     nl = TRUE),
+  data = dat1, 
+  family = gaussian(),
+  prior = prior,
+  control = list(adapt_delta = 0.9),
+  iter = 10000, 
+  thin = 2, 
+  chains = 6, 
+  cores = 6, 
+  refresh = 0)
 ```
 
-We can check the summary to see if the model was able to accurately estimate $\beta_1$: 
+We can check the summary to see if the model was able to accurately estimate $$\beta_1$$: 
 
 ```{r}
-summary(fit1)
+(res <- summary(fit1))
 ```
 
-The estimate of interest in the output above is `beta_Intercept` under `Population-Level Effects`. This corresponds to the estimate of $\beta_1$ in the equation above. We see that the estimate is close to the true value of 3. We also see that the estimate of the standard deviation of the random effect is 2.99 [95% CI: 1.64, 3.98], indicating a strong subject specific effect (which is what we would expect since we generated the data this way). 
+The estimate of interest in the output above is `beta_Intercept` under `Population-Level Effects`. This corresponds to the estimate of $$\beta_1$$ in the equation above. We see that the estimate is close to the true value of 3. We also see that the estimate of the standard deviation of the random effect is `r round(res$random$ID[1],2)` [95% CI: `r round(res$random$ID[3],2)`, `r round(res$random$ID[4],2)`], indicating a strong subject specific effect (which is what we would expect since we generated the data this way). 
 
 We can also plot some model diagnostics to ensure proper mixing of the Markov chains:
 
@@ -135,6 +150,11 @@ plot(fit1)
 plot(marginal_effects(fit1), points = TRUE, ask = FALSE)
 ```
 
+## Session Info
+
+```{r, echo=FALSE}
+print(sessionInfo(), locale = F)
+```
 
 
 
@@ -180,11 +200,11 @@ n = 500 ; t = 2
 A <- rnorm(n)
 B <- rnorm(n)
 random_eff <- rnorm(500)
-signal_to_noise_ratio = 2
+SNR = 2
 
 Y1 <- b[1] + b[2]*A + b[2]^2 * B + rep(random_eff, 1)
 # error <- rnorm(n)
-# k <- sqrt(stats::var(y.star)/(signal_to_noise_ratio*stats::var(error)))
+# k <- sqrt(stats::var(y.star)/(SNR*stats::var(error)))
 # # response for time 1
 # Y1 <- y.star + k*error
 # plot(density(y))

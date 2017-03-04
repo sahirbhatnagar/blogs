@@ -101,5 +101,11 @@ abline(a = 0, b = 1, col = "red")
 ```
 
 
+## Session Info
+
+```{r, echo=FALSE}
+print(sessionInfo(), locale = F)
+```
+
 
 
