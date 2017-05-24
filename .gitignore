@@ -16,7 +16,7 @@ _site
 *.zip
 *.vi
 *~
-
+cache/*
 # OS or Editor folders
 .DS_Store
 ._*
