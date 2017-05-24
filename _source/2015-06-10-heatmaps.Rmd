@@ -179,10 +179,12 @@ For some reason, this map is not showing up on this website, but it should work 
 
 After some user setup (see the plotly [help page](https://plot.ly/r/getting-started/)), the following code creates an interactive heatmap:
 
-```{r}
+```{r, eval=FALSE}
 expression <- t(genes)
 plotly::plot_ly(z = expression,colorscale = col.pal, type = "heatmap")
 ```
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~sahirbhatnagar/36.embed"></iframe>
 
 ----
 

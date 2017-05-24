@@ -13,7 +13,7 @@ comments: yes
 
 Consider the following repeated measures model:
 
-$$ y_{ij} = \beta_1 a_{ij}  + \beta_1^2 b_{ij} + \mu_i + \varepsilon_{ij}$$
+$$ y_{ij} =\beta_0 + \beta_1 a_{ij}  + \beta_1^2 b_{ij} + \mu_i + \varepsilon_{ij}$$
 
 for $$i = 1, \ldots, n$$, $$j = 1, 2$$ where $$n$$ is the sample size, $$j$$ represents the index of the repeated measure, i.e., each subject has two measurements, $$\mu_i$$ is a normally distributed random effect, $$\varepsilon_{ij}$$ is a normally distributed error term, $$y_{ij}$$ is the continuous response, and $$a_{ij}, b_{ij}$$ are covariates. This is a multilevel model because of the nested structure of the data, and also non-linear in the $$\beta_1$$ parameter. In this post I simulate some data under this model, and try to leverage Bayesian computation techniques to estimate the parameters using the [brms](https://github.com/paul-buerkner/brms) which is an interface to fit Bayesian generalized (non-)linear multilevel models using [Stan](http://mc-stan.org/).
 
@@ -239,6 +239,19 @@ fit1 <- brms::brm(
 ## Start sampling
 {% endhighlight %}
 
+
+
+{% highlight text %}
+## Warning: There were 14 divergent transitions after warmup. Increasing adapt_delta above 0.9 may help. See
+## http://mc-stan.org/misc/warnings.html#divergent-transitions-after-warmup
+{% endhighlight %}
+
+
+
+{% highlight text %}
+## Warning: Examine the pairs() plot to diagnose sampling problems
+{% endhighlight %}
+
 We can check the summary to see if the model was able to accurately estimate $$\beta_1$$: 
 
 
@@ -261,25 +274,25 @@ We can check the summary to see if the model was able to accurately estimate $$\
 ## Group-Level Effects: 
 ## ~ID (Number of levels: 500) 
 ##                   Estimate Est.Error l-95% CI u-95% CI Eff.Sample
-## sd(mui_Intercept)     3.07      0.56     1.81     4.02       3682
+## sd(mui_Intercept)     2.13      0.79     0.28     3.42       2384
 ##                   Rhat
 ## sd(mui_Intercept)    1
 ## 
 ## Population-Level Effects: 
 ##                Estimate Est.Error l-95% CI u-95% CI Eff.Sample Rhat
-## mui_Intercept      9.63      0.30     9.05    10.22      12797    1
-## beta_Intercept     3.02      0.04     2.94     3.10      13189    1
+## mui_Intercept     10.28      0.30     9.69    10.87      13058    1
+## beta_Intercept     2.97      0.04     2.89     3.06      12924    1
 ## 
 ## Family Specific Parameters: 
 ##       Estimate Est.Error l-95% CI u-95% CI Eff.Sample Rhat
-## sigma     7.67      0.25      7.2     8.18       4979    1
+## sigma     8.05      0.25     7.56     8.55       4058    1
 ## 
 ## Samples were drawn using sampling(NUTS). For each parameter, Eff.Sample 
 ## is a crude measure of effective sample size, and Rhat is the potential 
 ## scale reduction factor on split chains (at convergence, Rhat = 1).
 {% endhighlight %}
 
-The estimate of interest in the output above is `beta_Intercept` under `Population-Level Effects`. This corresponds to the estimate of $$\beta_1$$ in the equation above. We see that the estimate is close to the true value of 3. We also see that the estimate of the standard deviation of the random effect is 3.07 [95% CI: 1.81, 4.02], indicating a strong subject specific effect (which is what we would expect since we generated the data this way). 
+The estimate of interest in the output above is `beta_Intercept` under `Population-Level Effects`. This corresponds to the estimate of $$\beta_1$$ in the equation above. We see that the estimate is close to the true value of 3. We also see that the estimate of the standard deviation of the random effect is 2.13 [95% CI: 0.28, 3.42], indicating a strong subject specific effect (which is what we would expect since we generated the data this way). 
 
 We can also plot some model diagnostics to ensure proper mixing of the Markov chains:
 
@@ -300,32 +313,36 @@ plot(marginal_effects(fit1), points = TRUE, ask = FALSE)
 
 
 {% highlight text %}
-## R version 3.3.2 (2016-10-31)
+## R version 3.4.0 (2017-04-21)
 ## Platform: x86_64-pc-linux-gnu (64-bit)
-## Running under: Ubuntu 16.04.1 LTS
+## Running under: Ubuntu 16.04.2 LTS
+## 
+## Matrix products: default
+## BLAS: /usr/lib/openblas-base/libblas.so.3
+## LAPACK: /usr/lib/libopenblasp-r0.2.18.so
 ## 
 ## attached base packages:
 ## [1] methods   stats     graphics  grDevices utils     datasets 
 ## [7] base     
 ## 
 ## other attached packages:
-## [1] brms_1.5.0    ggplot2_2.2.1 Rcpp_0.12.9  
+## [1] brms_1.5.0    ggplot2_2.2.1 Rcpp_0.12.11 
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] plyr_1.8.4           highr_0.6            tools_3.3.2         
-##  [4] digest_0.6.12        bayesplot_1.1.0      evd_2.3-2           
-##  [7] statmod_1.4.27       evaluate_0.10        tibble_1.2          
-## [10] gtable_0.2.0         nlme_3.1-128         lattice_0.20-34     
-## [13] DBI_0.5-1            parallel_3.3.2       loo_1.0.0           
-## [16] gridExtra_2.2.1      coda_0.19-1          dplyr_0.5.0         
-## [19] stringr_1.2.0        knitr_1.15.1         stats4_3.3.2        
-## [22] grid_3.3.2           inline_0.3.14        R6_2.2.0            
-## [25] rstan_2.14.1         pacman_0.4.1         reshape2_1.4.2      
-## [28] magrittr_1.5         scales_0.4.1         codetools_0.2-15    
-## [31] StanHeaders_2.14.0-1 matrixStats_0.51.0   rstantools_1.1.0    
-## [34] assertthat_0.1       abind_1.4-5          colorspace_1.3-2    
-## [37] labeling_0.3         stringi_1.1.2        lazyeval_0.2.0      
-## [40] munsell_0.4.3
+##  [1] highr_0.6            compiler_3.4.0       plyr_1.8.4          
+##  [4] tools_3.4.0          digest_0.6.12        bayesplot_1.1.0     
+##  [7] evd_2.3-2            statmod_1.4.27       evaluate_0.10       
+## [10] tibble_1.3.0         gtable_0.2.0         nlme_3.1-131        
+## [13] lattice_0.20-35      DBI_0.5-1            parallel_3.4.0      
+## [16] loo_1.0.0            gridExtra_2.2.1      coda_0.19-1         
+## [19] stringr_1.2.0        dplyr_0.5.0          knitr_1.16          
+## [22] stats4_3.4.0         grid_3.4.0           inline_0.3.14       
+## [25] R6_2.2.0             rstan_2.14.1         pacman_0.4.1        
+## [28] reshape2_1.4.2       magrittr_1.5         scales_0.4.1        
+## [31] codetools_0.2-15     StanHeaders_2.14.0-1 matrixStats_0.51.0  
+## [34] rstantools_1.1.0     abind_1.4-5          assertthat_0.1      
+## [37] colorspace_1.3-2     labeling_0.3         stringi_1.1.5       
+## [40] lazyeval_0.2.0       munsell_0.4.3
 {% endhighlight %}
 
 

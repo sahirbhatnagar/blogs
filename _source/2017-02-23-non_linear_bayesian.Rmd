@@ -10,12 +10,12 @@ comments: yes
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, tidy = FALSE)
+knitr::opts_chunk$set(echo = TRUE, tidy = FALSE, cache = TRUE)
 ```
 
 Consider the following repeated measures model:
 
-$$ y_{ij} = \beta_1 a_{ij}  + \beta_1^2 b_{ij} + \mu_i + \varepsilon_{ij}$$
+$$ y_{ij} =\beta_0 + \beta_1 a_{ij}  + \beta_1^2 b_{ij} + \mu_i + \varepsilon_{ij}$$
 
 for $$i = 1, \ldots, n$$, $$j = 1, 2$$ where $$n$$ is the sample size, $$j$$ represents the index of the repeated measure, i.e., each subject has two measurements, $$\mu_i$$ is a normally distributed random effect, $$\varepsilon_{ij}$$ is a normally distributed error term, $$y_{ij}$$ is the continuous response, and $$a_{ij}, b_{ij}$$ are covariates. This is a multilevel model because of the nested structure of the data, and also non-linear in the $$\beta_1$$ parameter. In this post I simulate some data under this model, and try to leverage Bayesian computation techniques to estimate the parameters using the [brms](https://github.com/paul-buerkner/brms) which is an interface to fit Bayesian generalized (non-)linear multilevel models using [Stan](http://mc-stan.org/).
 
