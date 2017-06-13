@@ -39,6 +39,13 @@ comments: no
 
 ***
 
+### 2017
+
+* **SSC 2017, Winnipeg** _Statistical Society of Canada Annual Meeting (Contributed)_ [Variable Selection in Nonlinear Interactions with the Group Lasso](/slides/BhatnagarSSC2017.pdf)
+
+
+<br>
+
 ### 2016
 
 * **Montreal Neurological Institute** _Ludmer Centre for Neuroinformatics and Mental Health_  
