@@ -41,7 +41,7 @@ comments: no
 
 ### 2017
 
-* **SSC 2017, Winnipeg** _Statistical Society of Canada Annual Meeting (Contributed)_ 
+* **SSC 2017, Winnipeg** _Statistical Society of Canada Annual Meeting (Contributed)_    
 [Variable Selection in Nonlinear Interactions with the Group Lasso]({{ site.github.url }}/slides/BhatnagarSSC2017.pdf)
 
 
