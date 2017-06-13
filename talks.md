@@ -41,7 +41,8 @@ comments: no
 
 ### 2017
 
-* **SSC 2017, Winnipeg** _Statistical Society of Canada Annual Meeting (Contributed)_ [Variable Selection in Nonlinear Interactions with the Group Lasso](/slides/BhatnagarSSC2017.pdf)
+* **SSC 2017, Winnipeg** _Statistical Society of Canada Annual Meeting (Contributed)_ 
+[Variable Selection in Nonlinear Interactions with the Group Lasso]({{ site.github.url }}/slides/BhatnagarSSC2017.pdf)
 
 
 <br>
@@ -66,7 +67,7 @@ comments: no
 [DNA methylation and Expression to predict childhood obesity](http://www.slideshare.net/sahirbhatnagar/sahir-chsgm2015)
 
 * **Lady David Institute** _Statistical Genetics Journal Club_  
-[Imputing Epigenomic Datasets](/slides/imputeepigenome.html)
+[Imputing Epigenomic Datasets]({{ site.github.url }}/slides/imputeepigenome.html)
 
 * **Lady Davis Institute** _Greenwood lab meeting_  
 [Making sense of Methylation and Expression data](http://www.slideshare.net/sahirbhatnagar/methylation-and-expression-data-integration)
@@ -82,7 +83,7 @@ comments: no
 [Reproducible Research with knitr](http://www.slideshare.net/sahirbhatnagar/rrslides)
 
 * **Lady Davis Institute** _Statistical Genetics Journal Club_  
-[Transmission Ratio Distortion in Extended Families](/slides/TRDslides.html)
+[Transmission Ratio Distortion in Extended Families]({{ site.github.url }}/slides/TRDslides.html)
 
 <br>
 
