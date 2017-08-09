@@ -10,36 +10,15 @@ comments: no
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
-## Workshops
-
-***
-
-### 2016
-
-* **McGill University**  _Department of Epidemiology, Biostatistics and Occupational Health (Sponsored by the Epidemiology, Biostatistics and Occupational Health Student Society)_  
-[Loops and Simulations in `R`](http://sahirbhatnagar.com/biosR/) 
-
-
-<br>
-
-
-### 2015
-
-* **Universit&eacute; de Montr&eacute;al**  _GERAD: Groupe d'&eacute;tudes et de recherche en analyse des d&eacute;cisions_  
-[Atelier sur le logiciel R](http://www.slideshare.net/sahirbhatnagar/atelier-rgerad)  
-[mat&eacute;riaux disponibles sur GitHub](https://github.com/sahirbhatnagar/atelier-R-GERAD)
-
-* **McGill University**  _Department of Epidemiology, Biostatistics and Occupational Health (Sponsored by the CRM Statistics Laboratory and the Montreal Biostatistics Seminar Series)_  
-[Reproducible Research: An introduction to `knitr`](http://www.slideshare.net/sahirbhatnagar/mcgill-knitr)  
-[contents available on GitHub](https://github.com/sahirbhatnagar/knitr-tutorial)
-
-<br><br>
-
 ## Talks
 
 ***
 
 ### 2017
+
+* **Lady Davis Institute** _Statistical Genetics Journal Club_  
+[Statistics vs. Machine Learning: Why can't we be friends?]({{ site.github.url }}/slides/stat_ml_jc_july20.pdf)
+
 
 * **SSC 2017, Winnipeg** _Statistical Society of Canada Annual Meeting (Contributed)_    
 [Variable Selection in Nonlinear Interactions with the Group Lasso]({{ site.github.url }}/slides/BhatnagarSSC2017.pdf)
@@ -49,7 +28,7 @@ comments: no
 
 ### 2016
 
-* **Montreal Neurological Institute** _Ludmer Centre for Neuroinformatics and Mental Health_  
+* **Montreal Neurological Institute** _Ludmer Centre for Neuroinformatics and Mental Health (Invited)_  
 [Methods for High Dimensional Interactions](http://www.slideshare.net/sahirbhatnagar/methods-for-high-dimensional-interactions)
 
 * **CHSGM 2016, Halifax** _Canadian Human and Statistical Genetics Meeting (Contributed)_  
@@ -66,7 +45,7 @@ comments: no
 * **CHSGM 2015, Vancouver** _Canadian Human and Statistical Genetics Meeting (Contributed)_  
 [DNA methylation and Expression to predict childhood obesity](http://www.slideshare.net/sahirbhatnagar/sahir-chsgm2015)
 
-* **Lady David Institute** _Statistical Genetics Journal Club_  
+* **Lady Davis Institute** _Statistical Genetics Journal Club_  
 [Imputing Epigenomic Datasets]({{ site.github.url }}/slides/imputeepigenome.html)
 
 * **Lady Davis Institute** _Greenwood lab meeting_  
@@ -106,6 +85,35 @@ comments: no
 [Computational methods for absolute risk estimation in Case-Cohort studies](http://www.slideshare.net/sahirbhatnagar/computational-45455967)
 
 <br><br>
+
+
+## Workshops
+
+***
+
+### 2016
+
+* **McGill University**  _Department of Epidemiology, Biostatistics and Occupational Health (Sponsored by the Epidemiology, Biostatistics and Occupational Health Student Society)_  
+[Loops and Simulations in `R`](http://sahirbhatnagar.com/biosR/) 
+
+
+<br>
+
+
+### 2015
+
+* **Universit&eacute; de Montr&eacute;al**  _GERAD: Groupe d'&eacute;tudes et de recherche en analyse des d&eacute;cisions_  
+[Atelier sur le logiciel R](http://www.slideshare.net/sahirbhatnagar/atelier-rgerad)  
+[mat&eacute;riaux disponibles sur GitHub](https://github.com/sahirbhatnagar/atelier-R-GERAD)
+
+* **McGill University**  _Department of Epidemiology, Biostatistics and Occupational Health (Sponsored by the CRM Statistics Laboratory and the Montreal Biostatistics Seminar Series)_  
+[Reproducible Research: An introduction to `knitr`](http://www.slideshare.net/sahirbhatnagar/mcgill-knitr)  
+[contents available on GitHub](https://github.com/sahirbhatnagar/knitr-tutorial)
+
+<br><br>
+
+
+
 
 ## Posters
 
