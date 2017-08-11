@@ -11,11 +11,11 @@ comments: yes
 
 
 
-In this short post, I show how to calculate [polygenic risk scores](https://en.wikipedia.org/wiki/Polygenic_score) (PRS) using the [`data.table`](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html) package in `R`. I will show an example on a small dataset, but can be easily extended to much larger datasets. The PRS is given by:  
+In this short post, I show how to calculate [polygenic risk scores](https://en.wikipedia.org/wiki/Polygenic_score) (PRS) using the [`data.table`](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html) package in `R`. I will show an example on a small dataset, but can be easily extended to much larger datasets. The PRS based on $p$ SNPs is given by:  
 
 
 $$
-PRS_i = \sum_{j=1}^{10}\beta_j \times SNP_{ij}
+PRS_i = \sum_{j=1}^{p}\beta_j \times SNP_{ij}
 $$
 
 where $$ \beta_j $$ is the beta coefficient for the $$ j^{th} $$ SNP, and $$ SNP_{ij} $$ is the value of $$ j^{th} $$ SNP for the $$ i^{th} $$ individual.  
