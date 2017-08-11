@@ -4,7 +4,7 @@ author: "Sahir"
 date: "August 11, 2017"
 output: html_document
 layout: post
-tags: [R, regression, Bayesian, Multilevel]
+tags: [R, data.table, genomics]
 permalink: polygenic-risk-scores
 comments: yes
 ---
