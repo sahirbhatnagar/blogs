@@ -11,12 +11,21 @@ comments: yes
 
 
 
-In this short post, I show how to calculate [polygenic risk scores](https://en.wikipedia.org/wiki/Polygenic_score) using the [`data.table`](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html) package in `R`. I will show an example on a small dataset, but can be easily extended to much larger datasets. 
+In this short post, I show how to calculate [polygenic risk scores](https://en.wikipedia.org/wiki/Polygenic_score) (PRS) using the [`data.table`](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html) package in `R`. I will show an example on a small dataset, but can be easily extended to much larger datasets. The PRS is given by:  
+
+
+\[
+PRS_i = \sum_{j=1}^{10}\beta_j \times SNP_{ij}
+\]
+
+where $$ \beta_j $$ is the beta coefficient for the $$ j^{th} $$ SNP, and $$ SNP_{ij} $$ is the value of $$ j^{th} $$ SNP for the $$ i^{th} $$ individual.  
+
+<!--more-->
+
 
 First we load the [`data.table`](https://github.com/Rdatatable/data.table/wiki) package:
 
 {% highlight r %}
-library(pacman)
 pacman::p_load(data.table)
 {% endhighlight %}
 
@@ -48,14 +57,7 @@ DT
 ## 10:   0   2   1 -1.42107331
 {% endhighlight %}
 
-The goal is to calculate a polygenic risk score (PRS) for each individual $i$ given by 
-
-$$
-PRS_i = \sum_{j=1}^{10}\beta_j \times SNP_{ij}
-$$
-where $\beta_j$ is the beta coefficient for the $j^{th}$ SNP, and $SNP_{ij}$ is the value of $j^{th}$ SNP for the $i^{th}$ individual.  
-
-In situations where there are many individuals, this can be a tedious calculation because standard methods would require to type out the name of all of the columns to be multiplied by. Instead, using the [`.SDcols`](https://stackoverflow.com/questions/14937165/using-dynamic-column-names-in-data-table?lq=1) argument, greatly simplifies this process by allowing columns to be created dynamically.  
+In situations where there are many individuals, this can be a tedious calculation because standard methods would require to type out the name of all of the columns to be multiplied by. Instead, using the [`.SDcols`](https://stackoverflow.com/questions/14937165/using-dynamic-column-names-in-data-table?lq=1) argument, greatly simplifies this process by allowing columns to be called on dynamically.  
 
 We first create a character vector of the column names that we want to multiply beta by as well as the new column names that we want to store the results in:
 
