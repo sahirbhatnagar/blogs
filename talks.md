@@ -119,6 +119,16 @@ comments: no
 
 ***
 
+### 2017
+
+* **Cambridge, UK** _26th International Genetic Epidemiology Meeting._
+[Estimation for High-Dimensional Multivariate Linear Mixed Models in Structured Populations](https://figshare.com/articles/Estimation_for_High-Dimensional_Multivariate_Linear_Mixed_Models_in_Structured_Populations/5405317)
+
+<iframe src="https://widgets.figshare.com/articles/5405317/embed?show_title=1" width="568" height="351" frameborder="0"></iframe>
+
+<br>
+
+
 
 ### 2016
 
