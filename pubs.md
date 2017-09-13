@@ -4,21 +4,23 @@ title: "Publications"
 ---
 
 
-(11) Kronfli N, **Bhatnagar SR**, Moodie EEM, Hull MW, Klein MB, for the Canadian Co-infection Cohort Investigators. The early effects of hepatitis C (HCV) treatment on trends in cause-specific mortality in HIV-HCV co-infection. Submitted (2017/08).
+(10) Nadig A, Flanagan T, White K, **Bhatnagar SR**. Results of a RCT on a transition support program for adults with ASD: Effects on Self Determination and Quality of Life. Submitted (2017/09).
+
+(9) Kronfli N, **Bhatnagar SR**, Moodie EEM, Hull MW, Klein MB, for the Canadian Co-infection Cohort Investigators. The early effects of hepatitis C (HCV) treatment on trends in cause-specific mortality in HIV-HCV co-infection. Submitted (2017/08).
 
 
-(10) Steinberg J, Brooks R, Southam L, **Bhatnagar SR**, Roumeliotis T, Hatzikotoulas K, Zengini E, Wilkinson JM, Choudhary J, McCaskie AW, Zeggini E. Widespread Epigenomic, Transcriptomic and Proteomic Differences Between Osteophytic and Articular Patient Chondrocytes in Osteoarthritis. Submitted (2017/07).
+(8) Steinberg J, Brooks R, Southam L, **Bhatnagar SR**, Roumeliotis T, Hatzikotoulas K, Zengini E, Wilkinson JM, Choudhary J, McCaskie AW, Zeggini E. Widespread Epigenomic, Transcriptomic and Proteomic Differences Between Osteophytic and Articular Patient Chondrocytes in Osteoarthritis. Submitted (2017/07).
+
+<!--
+(9) Delouya G, **Bhatnagar SR**, Tiberi D, Campeau S, Rompotinos D, Taussky D. Impact of adipose tissue distribution on cancer aggressiveness and positive margins after radical prostatectomy. Submitted (2017/01).-->
 
 
-(9) Delouya G, **Bhatnagar SR**, Tiberi D, Campeau S, Rompotinos D, Taussky D. Impact of adipose tissue distribution on cancer aggressiveness and positive margins after radical prostatectomy. Submitted (2017/01).
+(7). **Bhatnagar SR**, Yang Y, Khundrakpam B, Evans A, Blanchette M, Bouchard L, Greenwood CMT. _An analytic approach for interpretable predictive models in high dimensional data, in the presence of interactions with exposures_. [DOI 10.1101/102475](https://doi.org/10.1101/102475). Submitted (2017/01)
 
 
-(8). **Bhatnagar SR**, Yang Y, Khundrakpam B, Evans A, Blanchette M, Bouchard L, Greenwood CMT. _An analytic approach for interpretable predictive models in high dimensional data, in the presence of interactions with exposures_. [DOI 10.1101/102475](https://doi.org/10.1101/102475). Submitted (2017/01)
-
-
-(7). Hamadani FT, **Bhatnagar SR**, Balvardi S, Trepanier M, Grushka J, Deckelbaum D, Court O, Fata P
+<!--(7). Hamadani FT, **Bhatnagar SR**, Balvardi S, Trepanier M, Grushka J, Deckelbaum D, Court O, Fata P
 (2016). Burnout and Career Satisfaction Among Canadian General Surgeons: Results of the CAGS
-National Burnout Study. Submitted (2016/08).
+National Burnout Study. Submitted (2016/08).-->
 
 
 (6). Klein Oros K, Oualkacha K, Lafond M, **Bhatnagar SR**, Tonin PN, Greenwood CMT (2016). _Gene coexpression analyses differentiate networks associated with diverse cancers harbouring TP53 missense or null mutations_. Frontiers in Genetics, section Statistical Genetics and Methodology. Aug 3:7:137. [DOI 10.3389/fgene.2016.00137](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4971393/)
