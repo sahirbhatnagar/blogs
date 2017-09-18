@@ -4,7 +4,7 @@ title: "Publications"
 ---
 
 
-(10) Nadig A, Flanagan T, White K, **Bhatnagar SR**. Results of a RCT on a transition support program for adults with ASD: Effects on Self Determination and Quality of Life. Submitted (2017/09).
+(10) Nadig A, Flanagan T, White K, **Bhatnagar SR**. Results of a RCT on a transition support program for adults with ASD: Effects on Self Determination and Quality of Life. Submitted (2017/09).  
 
 (9) Kronfli N, **Bhatnagar SR**, Moodie EEM, Hull MW, Klein MB, for the Canadian Co-infection Cohort Investigators. The early effects of hepatitis C (HCV) treatment on trends in cause-specific mortality in HIV-HCV co-infection. Submitted (2017/08).
 
