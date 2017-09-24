@@ -5,7 +5,7 @@ date: "August 11, 2017"
 output: html_document
 layout: post
 tags: [R, data.table, genomics]
-permalink: blog/polygenic-risk-scores
+permalink: polygenic-risk-scores
 comments: yes
 ---
 
